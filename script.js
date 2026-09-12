@@ -2248,16 +2248,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   navAll.addEventListener('click', () => goToScreen(0));
-  navLibrary.addEventListener('click', () => goToScreen(1));
-  navPlaylists.addEventListener('click', () => goToScreen(2));
+  navLibrary.addEventListener('click', () => goToScreen(0));
+  navPlaylists.addEventListener('click', () => goToScreen(0));
 
   // Ensure correct initial state
-  goToScreen(1);
+  goToScreen(0);
 
   // Add back button functionality
   const libraryBackBtn = document.getElementById('libraryBackBtn');
   if (libraryBackBtn) {
-    libraryBackBtn.addEventListener('click', () => goToScreen(1));
+    libraryBackBtn.addEventListener('click', () => goToScreen(0));
   }
 
   function buildLibraryPlaylist(libKey) {
@@ -2335,7 +2335,7 @@ optionsBtn.addEventListener('click', (e) => {
       libraryPlaylistEl.appendChild(li);
     });
 
-    goToScreen(2); // Go to library playlist screen
+    goToScreen(1); // Go to library playlist screen
   }
 
   // Function to open library playlist
@@ -2380,30 +2380,42 @@ function updateCoverSize() {
   const playerContainer = document.querySelector('.player');
   const libraryPlaylist = document.querySelector('#libraryPlaylist');
   
-  if (IS_DESKTOP) {
-    nowPlayingImg.style.maxWidth = '320px';
-    nowPlayingImg.style.marginBottom = '0.8rem';
+  if (IS_DESKTOP) { //look...i dont even know what happened....
+    nowPlayingImg.style.maxWidth = '315px';
+    nowPlayingImg.style.marginBottom = '1.3rem';
     playerContainer.style.marginTop = '0px';
     libraryPlaylist.style.maxHeight = 'calc(100% - 58.5%)';
-    coverWrapper.style.marginBottom = '3.5vh';
+    coverWrapper.style.marginBottom = '4vh';
     realBottomBar.style.width = '99.3%';
-    player.style.transform = 'translateX(3.77%)';
-  } else if (ASPECT_RATIO > 2.1) {
-      nowPlayingImg.style.maxWidth = '400px';
-      nowPlayingImg.style.marginBottom = '1.3rem';
-      playerContainer.style.marginTop = '20px';
-      libraryPlaylist.style.maxHeight = 'calc(100% - 51.5%)';
-      coverWrapper.style.marginBottom = '4vh';
-      player.style.transform = 'translateX(0%)';
-    } else {
-        nowPlayingImg.style.maxWidth = '400px';
-        nowPlayingImg.style.marginBottom = '1.5rem';
-        playerContainer.style.marginTop = '20px';
-        libraryPlaylist.style.maxHeight = 'calc(100% - 51.5%)';
-        coverWrapper.style.marginBottom = '4vh';
-        player.style.transform = 'translateX(0%)';
-      }
+    player.style.transform = 'translateX(11%)';
+    player.style.width = '88%';
+  } else if (ASPECT_RATIO > 2.1 && IS_DESKTOP) { //yeah why did i make these two else if??
+    nowPlayingImg.style.maxWidth = '380px';
+    nowPlayingImg.style.marginBottom = '1.5rem';
+    playerContainer.style.marginTop = '20px';
+    libraryPlaylist.style.maxHeight = 'calc(100% - 51.5%)';
+    coverWrapper.style.marginBottom = '4vh';
+    realBottomBar.style.width = '99.3%';
+    player.style.transform = 'translateX(10%)';
+    player.style.width = '90%';
+  } else if (ASPECT_RATIO > 2.1 && !IS_DESKTOP) {
+    nowPlayingImg.style.maxWidth = '400px';
+    nowPlayingImg.style.marginBottom = '1.5rem';
+    playerContainer.style.marginTop = '20px';
+    libraryPlaylist.style.maxHeight = 'calc(100% - 51.5%)';
+    coverWrapper.style.marginBottom = '4vh';
+    player.style.transform = 'translateX(0%)';
+    player.style.width = '100%';
+  } else {
+    nowPlayingImg.style.maxWidth = '400px';
+    nowPlayingImg.style.marginBottom = '1.5rem';
+    playerContainer.style.marginTop = '20px';
+    libraryPlaylist.style.maxHeight = 'calc(100% - 51.5%)';
+    coverWrapper.style.marginBottom = '4vh';
+    player.style.transform = 'translateX(0%)';
+    player.style.width = '100%';
   }
+}
 
 // Initial call
 updateCoverSize();
@@ -2845,6 +2857,7 @@ libraryBigShuffle.addEventListener('click', () => {
 
 // --- load & play ---
 function loadSong(index) {
+  
   
   const song = playlist[index];
 
@@ -3706,11 +3719,18 @@ viewport.addEventListener('touchend', (e) => {
 
 // --- init ---
 queueIndex = -1;
-currentSong = -1;
+currentSong = Math.floor(Math.random() * playlist.length);
 loadSong(currentSong); // Just load, don't play
+shuffleBtn.click(); //i think this one actually activates shuffle
+togglePlaylistBtn.click();
+playlistSheet.classList.add("open");
+playlistWrapper.classList.toggle('playlist-hidden', !playlistVisible);
+togglePlaylistBtn.classList.toggle('mode-active', !playlistVisible);
+openPlaylistBtn.click()
+//setToggleButtonState(shuffleBtn, shuffle);
 updateActiveSong();
 setPlayIcon(false); // Show play icon (paused state)
 playbackSource = "All Songs";
-currentPlaylist = "All Songs";
+currentPlaylist = "Worship Songs";
 updatePlaylistLabel();
 window.addEventListener('resize', updateTitleScroll);
