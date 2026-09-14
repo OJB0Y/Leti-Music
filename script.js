@@ -3791,4 +3791,20 @@ playbackSource = "All Songs";
 currentPlaylist = "Worship Songs";
 updatePlaylistLabel();
 
+getSongColors(song.cover).then(colors => {
+  if(IS_DESKTOP){
+    updatePlaylistGradient(colors.dark);
+    currentBarColor = colors.light;
+    lyricsSection.style.background = colors.vibrant;
+    lyricsScreen.style.background = colors.vibrant;
+    openLyricsBtn.style.color = colors.vibrant;
+  } else {
+    updatePlaylistGradient(colors.dark);
+    currentBarColor = colors.light;
+    lyricsSection.style.background = colors.vibrant;
+    lyricsScreen.style.background = colors.vibrant
+    openLyricsBtn.style.color = colors.vibrant;
+  };
+});
+
 window.addEventListener('resize', updateTitleScroll);
