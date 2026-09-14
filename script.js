@@ -64,30 +64,10 @@ const playlist = [
     cover: "images/Cover of Exitos.jpg",
   },
   {
-    title: "Oh Alma Mía (2024)",//10
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Oh Alma Mía - En Vivo Desde El Salvador - Los Voceros de Cristo.mp3",
-    cover: "images/Cover of Loor A Ti Mi Dios - En Vivo Desde El Salvador by Los Voceros de Cristo.jpg",
-  },
-  {
-    title: "Oh Alma Mía Ft Julio Melgar (2016)",
-    artist: "Los Voceros de Cristo, Julio Melgar",
-    src: "songs/Oh Alma Mia 2018.mp3",
-    cover: "images/new4.png",
-  },
-  {
     title: "Oh Alma Mía (2002)",
     artist: "Los Voceros de Cristo",
     src: "songs/a5.mp3",
     cover: "images/a5.png",
-  },
-  {
-    title: "Oh Alma Mía (2000)",
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Oh alma mía - Los Voceros de Cristo.mp3",
-    cover: "images/Loor.jpg",
-    hex: "#783800",
-    barColor: "#bf5900ff"
   },
   {
     title: "Escogido Fui de Dios (2025)",
@@ -1400,12 +1380,6 @@ const playlist = [
     artist: "Leonel Tuchez",
     src: "songs/SpotiDownloader.com - Pensaba En Ti - Leonel Tuchez.mp3",
     cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
-  },
-  {
-    title: "Jesús Es Mi Rey Soberano", 
-    artist: "Marcos Witt",
-    src: "songs/SpotiDownloader.com - Jesús Es Mi Rey Soberano - Marcos Witt.mp3",
-    cover: "images/Cover of Jesús Es Mi Rey Soberano by Marcos Witt.jpg",
   },
   {
     title: "Tu el Alfarero", 
@@ -2857,9 +2831,82 @@ libraryBigShuffle.addEventListener('click', () => {
 
 // --- load & play ---
 function loadSong(index) {
-  
-  
   const song = playlist[index];
+  
+const bgVideo = document.getElementById('bg-video');
+const videoOverlay = document.getElementById('video-overlay');
+const bgOverlay = document.getElementById('background-overlay');
+const nowPlayingCover = document.getElementById('cover');
+
+updateCoverSize();
+
+if (song.video && !IS_DESKTOP) {
+  // show video
+  bgVideo.src = song.video;
+  bgVideo.muted = true;   // allow autoplay
+  bgVideo.loop = true;    // optional
+  bgVideo.style.display = 'block';
+  videoOverlay.style.background = 'linear-gradient(to bottom, #00000026, #000000a5 80%, #121212)'; 
+  bgOverlay.style.background = 'linear-gradient(to bottom, #121212, #121212 20%)';
+
+  bgVideo.onloadedmetadata = () => {
+    const videoWidth = bgVideo.videoWidth;
+    const videoHeight = bgVideo.videoHeight;
+
+    if (videoWidth && videoHeight) {
+        const ratio = videoWidth / videoHeight;
+
+        if (videoWidth < window.innerWidth) {
+            bgVideo.style.width = window.innerWidth + 'px';
+            bgVideo.style.height = (window.innerWidth / ratio) + 'px';
+        } else {
+            bgVideo.style.width = "100%";
+            bgVideo.style.height = "100%";
+        }
+    }
+};
+
+  bgVideo.load();
+  bgVideo.play().catch(() => {});
+
+  visualizer.style.opacity = visualizerVisible ? '0' : '0';
+
+  requestAnimationFrame(() => bgVideo.classList.add('show'));
+
+  seekBar.style.opacity = 1;
+
+  // fade out cover
+  //nowPlayingCover.style.transition = 'opacity 0.5s ease';
+  nowPlayingCover.style.opacity = '0';
+
+  videoCover.style.opacity = '1';
+  titleWrapper.classList.add('move-left');
+  artist.classList.add('move-left');
+  updateTitleScrollVideo();
+
+  // stop visualizer
+  visualizer.classList.remove('active');
+  stopVisualizer();
+} else {
+  updateTitleScroll();
+  videoCover.style.opacity = '0';
+  titleWrapper.classList.remove('move-left');
+  artist.classList.remove('move-left');
+  // hide video
+  bgVideo.classList.remove('show');
+  setTimeout(() => bgVideo.style.display = 'none', 500);
+  videoOverlay.style.background = 'linear-gradient(to bottom,#6e6e6e4a, #0000007a 80%)';
+  bgOverlay.style.background = 'linear-gradient(to bottom, #0000007a, #121212 32%)';
+
+  seekBar.style.opacity = 1;
+
+  visualizer.style.opacity = visualizerVisible ? '0.15' : '0';
+
+  // fade cover back in
+  setTimeout(() => nowPlayingCover.style.opacity = '1', 600);
+
+  // start visualizer
+}
 
   loadLyricsPreview(song);
 
@@ -3719,18 +3766,29 @@ viewport.addEventListener('touchend', (e) => {
 
 // --- init ---
 queueIndex = -1;
+
 currentSong = Math.floor(Math.random() * playlist.length);
-loadSong(currentSong); // Just load, don't play
-shuffleBtn.click(); //i think this one actually activates shuffle
-togglePlaylistBtn.click();
+
+// Pull player screen up FIRST
+if (playlistVisible) {
+  togglePlaylistBtn.click();
+}
+
+// Now load the song
+loadSong(currentSong);
+
+// Enable shuffle
+shuffleBtn.click();
+
+// Open playlist sheet
 playlistSheet.classList.add("open");
-playlistWrapper.classList.toggle('playlist-hidden', !playlistVisible);
-togglePlaylistBtn.classList.toggle('mode-active', !playlistVisible);
-openPlaylistBtn.click()
-//setToggleButtonState(shuffleBtn, shuffle);
+
+// Finish UI
 updateActiveSong();
-setPlayIcon(false); // Show play icon (paused state)
+setPlayIcon(false);
+
 playbackSource = "All Songs";
 currentPlaylist = "Worship Songs";
 updatePlaylistLabel();
+
 window.addEventListener('resize', updateTitleScroll);
