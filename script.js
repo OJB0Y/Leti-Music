@@ -876,6 +876,7 @@ const playlist = [
     cover: "images/Cover of Lo Que Pasó Pasó by Musiko, Pedro Pablo Quintero.jpg",
     hex: "#EE3F2F",
     barColor: "#f6beb9",
+    lrc: "LRC files/Lo Que Paso Paso.lrc",
 },
 {
     title: "Vida Encontré",//145
@@ -1550,6 +1551,14 @@ const playlist = [
     src: "songs/SpotiDownloader.com - Agradecido - Oasis Ministry.mp3",
     cover: "images/Cover of Agradecido by Oasis Ministry, Madiel Lara.jpg",
     video: "videos/Oasis1.mp4",
+    lrc: "LRC files/Agradecido - Oasis Ministry, Madiel Lara.lrc",
+  },
+  {
+    title: "mi DIOS", //3##
+    artist: "Madiel Lara",
+    src: "songs/SpotiDownloader.com - mi DIOS - Madiel Lara.mp3",
+    cover: "images/Cover of mi DIOS by Madiel Lara.jpg",
+    lrc: "LRC files/mi DIOS - Madiel Lara.lrc",
   },/* 
   {
     title: "", //3##
