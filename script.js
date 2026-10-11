@@ -1566,6 +1566,18 @@ const playlist = [
     src: "songs/Soy Peregrino - Anita Morán (Video Oficial) - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
+  {
+    title: "Nos Veremos en la Gloria", 
+    artist: "Anita Morán",
+    src: "songs/NOS VEREMOS EN LA GLORIA - Anita Morán (VIDEO OFICIAL) - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "Esa Roca", 
+    artist: "Anita Morán",
+    src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
+    cover: "images/Cover of Esa Roca by Anita Morán.jpg",
+  }
   /* 
   {
     title: "", //3##
