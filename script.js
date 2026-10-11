@@ -1559,7 +1559,14 @@ const playlist = [
     src: "songs/SpotiDownloader.com - mi DIOS - Madiel Lara.mp3",
     cover: "images/Cover of mi DIOS by Madiel Lara.jpg",
     lrc: "LRC files/mi DIOS - Madiel Lara.lrc",
-  },/* 
+  },
+  {
+    title: "Soy Peregrino", //i lost track
+    artist: "Anita Morán",
+    src: "songs/Soy Peregrino - Anita Morán (Video Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  /* 
   {
     title: "", //3##
     artist: "",
