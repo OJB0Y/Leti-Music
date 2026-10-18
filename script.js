@@ -1646,35 +1646,200 @@ async function getSongColors(imageUrl) {
     const palette = await vibrant.getPalette();
 
     // Helper function to check if a color is too dark (close to black)
-    function isTooDark(hexColor) {
-      // Convert hex to RGB
+    function isBlackOrBrown(hexColor) {
       const r = parseInt(hexColor.slice(1, 3), 16);
       const g = parseInt(hexColor.slice(3, 5), 16);
       const b = parseInt(hexColor.slice(5, 7), 16);
-      
-      // Calculate perceived brightness (standard formula)
+
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
       const brightness = (r * 0.299 + g * 0.587 + b * 0.114);
-      
-      // If brightness is below 30 (out of 255), it's too dark
-      return brightness < 30;
+
+      // Black, near-black, or almost neutral dark colors
+      const isBlack = brightness < 30;
+
+      // Brown: dark, warm hue, with red generally exceeding blue
+      const isBrown =
+          brightness < 110 &&
+          r > g &&
+          g >= b &&
+          (r - b) > 25 &&
+          (max - min) > 20;
+
+      return isBlack || isBrown;
+    }
+
+    function hexToHsl(hexColor) {
+      const r = parseInt(hexColor.slice(1, 3), 16) / 255;
+      const g = parseInt(hexColor.slice(3, 5), 16) / 255;
+      const b = parseInt(hexColor.slice(5, 7), 16) / 255;
+
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      const delta = max - min;
+
+      let h = 0;
+      let s = 0;
+      let l = (max + min) / 2;
+
+      if (delta !== 0) {
+          s = delta / (1 - Math.abs(2 * l - 1));
+
+          switch (max) {
+              case r:
+                  h = ((g - b) / delta) % 6;
+                  break;
+              case g:
+                  h = (b - r) / delta + 2;
+                  break;
+              case b:
+                  h = (r - g) / delta + 4;
+                  break;
+          }
+
+          h *= 60;
+          if (h < 0) h += 360;
+      }
+
+      return [h, s, l];
+    }
+
+    function hslToHex(h, s, l) {
+      const k = n => (n + h / 30) % 12;
+      const a = s * Math.min(l, 1 - l);
+
+      const f = n =>
+          Math.round(
+              255 * (
+                  l - a * Math.max(
+                      -1,
+                      Math.min(k(n) - 3, 9 - k(n), 1)
+                  )
+              )
+          );
+
+      return "#" + [f(0), f(8), f(4)]
+          .map(v => v.toString(16).padStart(2, "0"))
+          .join("");
+    }
+
+    function adjustLightness(hexColor, amount) {
+      const [h, s, l] = hexToHsl(hexColor);
+
+      const newLightness = Math.max(
+          0,
+          Math.min(1, l + amount)
+      );
+
+      return hslToHex(h, s, newLightness);
+    }
+
+    function isTooDark(hexColor) {
+      const r = parseInt(hexColor.slice(1, 3), 16);
+      const g = parseInt(hexColor.slice(3, 5), 16);
+      const b = parseInt(hexColor.slice(5, 7), 16);
+
+      return (r * 0.299 + g * 0.587 + b * 0.114) < 50;
+    }
+
+    function isTooBright(hexColor) {
+      const r = parseInt(hexColor.slice(1, 3), 16);
+      const g = parseInt(hexColor.slice(3, 5), 16);
+      const b = parseInt(hexColor.slice(5, 7), 16);
+
+      return (r * 0.299 + g * 0.587 + b * 0.114) > 170;
+    }
+
+    function harmonizeVibrantColor(vibrantColor, darkColor) {
+      const [vH, vS, vL] = hexToHsl(vibrantColor);
+      const [dH, dS, dL] = hexToHsl(darkColor);
+
+      // Calculate the shortest distance between two hues (0–180 degrees)
+      const hueDifference = Math.abs(vH - dH);
+      const hueDistance = Math.min(hueDifference, 360 - hueDifference);
+
+      // Allow different shades of related colors
+      // Only correct colors from distinctly different hue families
+      if (hueDistance > 0) {
+          // Keep the dark color's hue, but make it subtly brighter
+          const newLightness = Math.min(0.72, Math.max(dL + 0.12, 0.30));
+
+          // Slightly increase saturation without making it overpowering
+          const newSaturation = Math.min(
+              0.75,
+              Math.max(dS * 0.85, 0.35)
+          );
+
+          return hslToHex(dH, newSaturation, newLightness);
+      }
+
+      // The colors are already harmonious
+      return vibrantColor;
     }
     
     // Get the colors from palette
-    let darkColor = palette.DarkVibrant?.getHex() || "#121212";
-    const vibrantColor = palette.Vibrant?.getHex() || "#121212";
+    const trueVibrantColor = palette.Vibrant?.getHex() || "#121212";
+
+    const originalDarkColor = palette.DarkVibrant?.getHex() || "#121212";
+
+    const useVibrantInstead = isBlackOrBrown(originalDarkColor);
+
+    let darkColor = useVibrantInstead
+      ? trueVibrantColor
+      : originalDarkColor;
+
+    let vibrantColor = trueVibrantColor;
+
     const lightColor = palette.LightVibrant?.getHex() || "#121212";
+
     const muted = palette.Muted?.getHex() || "#121212";
+
     const lightMuted = palette.LightMuted?.getHex() || "#121212";
+
     const darkMuted = palette.DarkMuted?.getHex() || "#121212";
     
-    // If DarkVibrant is too dark (close to black), fall back to Vibrant
-    if (isTooDark(darkColor)) {
-      darkColor = darkMuted;
+      
+  // Adjust Vibrant color
+    if (isTooBright(vibrantColor)) {
+      const [h, s, l] = hexToHsl(vibrantColor);
+
+      // Yellow and gold hues: preserve more of their brightness
+      const isYellow = h >= 30 && h <= 70;
+
+      const adjustment = isYellow
+          ? -0.05
+          : useVibrantInstead ? -0.30 : -0.20;
+
+      vibrantColor = adjustLightness(vibrantColor, adjustment);
     }
 
-    if (isTooDark(darkColor)) {
-      darkColor = lightColor;
+    if (isTooDark(vibrantColor)) {
+      vibrantColor = adjustLightness(vibrantColor, 0.20);
     }
+
+    // Adjust the dark background color
+    if (isTooDark(darkColor)) {
+      darkColor = adjustLightness(darkColor, 0.20);
+    }
+
+    if (isTooBright(darkColor)) {
+      const [h, s, l] = hexToHsl(darkColor);
+
+      // Preserve brightness for yellow and gold hues
+      const isYellow = h >= 40 && h <= 70;
+
+      const adjustment = isYellow
+          ? -0.12
+          : useVibrantInstead ? -0.30 : -0.20;
+
+      darkColor = adjustLightness(darkColor, adjustment);
+    }
+
+    // Ensure vibrantColor harmonizes with darkColor
+    vibrantColor = harmonizeVibrantColor(
+      vibrantColor,
+      darkColor
+    );
 
     const colors = {
       main: darkColor,
