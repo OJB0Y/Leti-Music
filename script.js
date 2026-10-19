@@ -2,6 +2,66 @@ const colorCache = {};
 
 const playlist = [
   {
+    title: "Soy Peregrino", //i moved some songs around
+    artist: "Anita Morán",
+    src: "songs/Soy Peregrino - Anita Morán (Video Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "NECESITO TU PRESENCIA", //3##
+    artist: "Anita Morán",
+    src: "songs/NECESITO TU PRESENCIA- ANITA MORÁN (OFICIAL9 - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "Recuerdo del Calvario", //3##
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Recuerdo del Calvario (Video Letra) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ", //3##
+    artist: "Anita Morán",
+    src: "songs/DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ - Video Oficial  Anita Morán - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "Ama a tu Hermano", //3##
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Ama a tu Hermano (Video Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "Solamente En Jesús", //3##
+    artist: "Anita Morán",
+    src: "songs/Solamente En Jesús - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "El Espíritu de Dios", //3##
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - El Espíritu de Dios (Video Letra) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "Matrimonio Feliz", //3##
+    artist: "Anita Morán",
+    src: "songs/Matrimonio Feliz - Anita Moran - PLAYLIST CRISTIANA.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "Mi Piloto", //3##
+    artist: "Anita Morán",
+    src: "songs/Mi Piloto - Anita Morán (Video Letra Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
+    title: "Perdón", //3##
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Perdón (Video Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+  {
     title: "Cordero", //0
     artist: "Manuel Bonilla",
     src: "songs/Cordero.mp3",
@@ -1561,12 +1621,6 @@ const playlist = [
     lrc: "LRC files/mi DIOS - Madiel Lara.lrc",
   },
   {
-    title: "Soy Peregrino", //i lost track
-    artist: "Anita Morán",
-    src: "songs/Soy Peregrino - Anita Morán (Video Oficial) - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
     title: "Nos Veremos en la Gloria", 
     artist: "Anita Morán",
     src: "songs/NOS VEREMOS EN LA GLORIA - Anita Morán (VIDEO OFICIAL) - Anita Morán.mp3",
@@ -1577,7 +1631,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
     cover: "images/Cover of Esa Roca by Anita Morán.jpg",
-  }
+  },
   /* 
   {
     title: "", //3##
