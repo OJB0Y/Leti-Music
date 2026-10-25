@@ -62,6 +62,42 @@ const playlist = [
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
+    title: "Nos Veremos en la Gloria", 
+    artist: "Anita Morán",
+    src: "songs/NOS VEREMOS EN LA GLORIA - Anita Morán (VIDEO OFICIAL) - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "Esa Roca",
+    artist: "Anita Morán",
+    src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
+    cover: "images/Cover of Esa Roca by Anita Morán.jpg",
+  },
+  {
+    title: "Bendeciré a Jehová",
+    artist: "Anita Morán",
+    src: "songs/Bendeciré a Jehová_spotdown.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "Vencedor",
+    artist: "Anita Morán",
+    src: "songs/Vencedor - Anita Moran.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "El Amor Que Me Das",
+    artist: "Anita Morán",
+    src: "songs/El Amor Que Me Das - Anita Moran.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "No Tardes",
+    artist: "Anita Morán",
+    src: "songs/No Tardes - Anita Moran.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
     title: "Cordero", //0
     artist: "Manuel Bonilla",
     src: "songs/Cordero.mp3",
@@ -1621,18 +1657,6 @@ const playlist = [
     lrc: "LRC files/mi DIOS - Madiel Lara.lrc",
   },
   {
-    title: "Nos Veremos en la Gloria", 
-    artist: "Anita Morán",
-    src: "songs/NOS VEREMOS EN LA GLORIA - Anita Morán (VIDEO OFICIAL) - Anita Morán.mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Esa Roca",
-    artist: "Anita Morán",
-    src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
-    cover: "images/Cover of Esa Roca by Anita Morán.jpg",
-  },
-  {
     title: "Espíritu De Dios",
     artist: "Leonel Tuchez",
     src: "songs/SpotiDownloader.com - Espíritu De Dios - Leonel Tuchez.mp3",
@@ -1649,12 +1673,6 @@ const playlist = [
     artist: "Leonel Tuchez",
     src: "songs/SpotiDownloader.com - Casa Nueva - Leonel Tuchez.mp3",
     cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
-  },
-  {
-    title: "Bendeciré a Jehová",
-    artist: "Anita Morán",
-    src: "songs/Bendeciré a Jehová_spotdown.mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
   },
   {
     title: "Más Que Vencedor",
