@@ -1627,7 +1627,7 @@ const playlist = [
     cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
   },
   {
-    title: "Esa Roca", 
+    title: "Esa Roca",
     artist: "Anita Morán",
     src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
     cover: "images/Cover of Esa Roca by Anita Morán.jpg",
@@ -1636,31 +1636,31 @@ const playlist = [
     title: "Espíritu De Dios",
     artist: "Leonel Tuchez",
     src: "songs/SpotiDownloader.com - Espíritu De Dios - Leonel Tuchez.mp3",
-    cover: getMp3Art("songs/SpotiDownloader.com - Espíritu De Dios - Leonel Tuchez.mp3"),
+    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg"
   },
   {
     title: "La Historia Del Violín", 
     artist: "Leonel Tuchez",
     src: "songs/SpotiDownloader.com - La Historia Del Violín - Leonel Tuchez.mp3",
-    cover: getMp3Art("songs/SpotiDownloader.com - La Historia Del Violín - Leonel Tuchez.mp3"),
+    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg"
   },
   {
     title: "Casa Nueva", 
     artist: "Leonel Tuchez",
     src: "songs/SpotiDownloader.com - Casa Nueva - Leonel Tuchez.mp3",
-    cover: getMp3Art("songs/SpotiDownloader.com - Casa Nueva - Leonel Tuchez.mp3"),
+    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
   },
   {
     title: "Bendeciré a Jehová",
     artist: "Anita Morán",
     src: "songs/Anita Morán - Bendeciré a Jehová (SPOTISAVER).mp3",
-    cover: getMp3Art("songs/Anita Morán - Bendeciré a Jehová (SPOTISAVER).mp3")
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
   },
   {
     title: "Más Que Vencedor",
     artist: "Danilo Montero",
     src: "songs/SpotiDownloader.com - Más Que Vencedor - Danilo Montero.mp3",
-    cover: getMp3Art("songs/SpotiDownloader.com - Más Que Vencedor - Danilo Montero.mp3")
+    cover: "images/Cambiado.jpg",
   },
   /* 
   {
