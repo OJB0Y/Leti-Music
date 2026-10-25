@@ -1680,6 +1680,12 @@ const playlist = [
     src: "songs/SpotiDownloader.com - Más Que Vencedor - Danilo Montero.mp3",
     cover: "images/Cambiado.jpg",
   },
+  {
+    title: "Feliz Cunmple",
+    artist: "Biper Y Sus Amigos",
+    src: "songs/SpotiDownloader.com - Feliz Cumple - Biper Y Sus Amigos.mp3",
+    cover: "images/Cover of Feliz Cumple by Biper Y Sus Amigos.jpg",
+  },
   /* 
   {
     title: "", //3##
