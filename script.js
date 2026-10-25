@@ -1632,6 +1632,36 @@ const playlist = [
     src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
     cover: "images/Cover of Esa Roca by Anita Morán.jpg",
   },
+  {
+    title: "Espíritu De Dios",
+    artist: "Leonel Tuchez",
+    src: "songs/SpotiDownloader.com - Espíritu De Dios - Leonel Tuchez.mp3",
+    cover: getMp3Art("songs/SpotiDownloader.com - Espíritu De Dios - Leonel Tuchez.mp3"),
+  },
+  {
+    title: "La Historia Del Violín", 
+    artist: "Leonel Tuchez",
+    src: "songs/SpotiDownloader.com - La Historia Del Violín - Leonel Tuchez.mp3",
+    cover: getMp3Art("songs/SpotiDownloader.com - La Historia Del Violín - Leonel Tuchez.mp3"),
+  },
+  {
+    title: "Casa Nueva", 
+    artist: "Leonel Tuchez",
+    src: "songs/SpotiDownloader.com - Casa Nueva - Leonel Tuchez.mp3",
+    cover: getMp3Art("songs/SpotiDownloader.com - Casa Nueva - Leonel Tuchez.mp3"),
+  },
+  {
+    title: "Bendeciré a Jehová",
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Bendeciré a Jehová (SPOTISAVER).mp3",
+    cover: getMp3Art("songs/Anita Morán - Bendeciré a Jehová (SPOTISAVER).mp3")
+  },
+  {
+    title: "Más Que Vencedor",
+    artist: "Danilo Montero",
+    src: "songs/SpotiDownloader.com - Más Que Vencedor - Danilo Montero.mp3",
+    cover: getMp3Art("songs/SpotiDownloader.com - Más Que Vencedor - Danilo Montero.mp3")
+  },
   /* 
   {
     title: "", //3##
