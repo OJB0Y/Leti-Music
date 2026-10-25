@@ -1641,7 +1641,7 @@ const playlist = [
   {
     title: "La Historia Del Violín", 
     artist: "Leonel Tuchez",
-    src: "songs/SpotiDownloader.com - La Historia Del Violín - Leonel Tuchez.mp3",
+    src: "songs/Leonel Tuchez - La Historia Del Violín (SPOTISAVER).mp3",
     cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg"
   },
   {
@@ -1653,7 +1653,7 @@ const playlist = [
   {
     title: "Bendeciré a Jehová",
     artist: "Anita Morán",
-    src: "songs/Anita Morán - Bendeciré a Jehová (SPOTISAVER).mp3",
+    src: "songs/Bendeciré a Jehová_spotdown.mp3",
     cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
   },
   {
