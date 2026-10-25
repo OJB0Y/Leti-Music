@@ -1681,7 +1681,7 @@ const playlist = [
     cover: "images/Cambiado.jpg",
   },
   {
-    title: "Feliz Cunmple",
+    title: "Feliz Cumpleaños",
     artist: "Biper Y Sus Amigos",
     src: "songs/SpotiDownloader.com - Feliz Cumple - Biper Y Sus Amigos.mp3",
     cover: "images/Cover of Feliz Cumple by Biper Y Sus Amigos.jpg",
