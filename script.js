@@ -3084,6 +3084,7 @@ const libraryBigShuffle = document.getElementById('libraryBigShuffle');
 let bigShuffle = false;
 
 libraryBigPlay.addEventListener('click', () => {
+  currentPlaylist = playbackSource;
   if (bigShuffle) {
       if (!currentLibraryQueue.length) return;
   openPlaylistBtn.style.opacity = 1;
@@ -3115,12 +3116,11 @@ libraryBigPlay.addEventListener('click', () => {
 
   changeSong(firstRandomSong);
   } else {
+    currentPlaylist = playbackSource;
   if (!currentLibraryQueue.length) return;
+  currentPlaylist = playbackSource;
   openPlaylistBtn.style.opacity = 1;
   bottomBar.style.opacity = 1;
-   updatePlaylistLabel();
-
-  currentPlaylist = playbackSource;
   updatePlaylistLabel();
 
   usingLibraryQueue = true;
