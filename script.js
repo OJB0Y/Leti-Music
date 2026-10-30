@@ -2,37 +2,37 @@ const colorCache = {};
 
 const playlist = [
   {
-    title: "Soy Peregrino", //i moved some songs around
+    title: "Soy Peregrino", //0
     artist: "Anita Morán",
     src: "songs/Soy Peregrino - Anita Morán (Video Oficial) - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
-    title: "NECESITO TU PRESENCIA", //3##
+    title: "NECESITO TU PRESENCIA", //1
     artist: "Anita Morán",
     src: "songs/NECESITO TU PRESENCIA- ANITA MORÁN (OFICIAL9 - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
-    title: "Recuerdo del Calvario", //3##
+    title: "Recuerdo del Calvario", //2
     artist: "Anita Morán",
     src: "songs/Anita Morán - Recuerdo del Calvario (Video Letra) - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
-    title: "DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ", //3##
+    title: "DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ", //3
     artist: "Anita Morán",
     src: "songs/DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ - Video Oficial  Anita Morán - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
-    title: "Ama a tu Hermano", //3##
+    title: "Ama a tu Hermano", //4
     artist: "Anita Morán",
     src: "songs/Anita Morán - Ama a tu Hermano (Video Oficial) - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
-    title: "Solamente En Jesús", //3##
+    title: "Solamente En Jesús", //5
     artist: "Anita Morán",
     src: "songs/Solamente En Jesús - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
@@ -56,13 +56,13 @@ const playlist = [
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
-    title: "Perdón", //3##
+    title: "Perdón", //9
     artist: "Anita Morán",
     src: "songs/Anita Morán - Perdón (Video Oficial) - Anita Morán.mp3",
     cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
   {
-    title: "Nos Veremos en la Gloria", 
+    title: "Nos Veremos en la Gloria", //10
     artist: "Anita Morán",
     src: "songs/NOS VEREMOS EN LA GLORIA - Anita Morán (VIDEO OFICIAL) - Anita Morán.mp3",
     cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
@@ -96,6 +96,48 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/No Tardes - Anita Moran.mp3",
     cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "El Alfarero",
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - El Alfarero (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "Tu Promesa",
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Tu Promesa (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "El Día Qué Llegaste",
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - El Día Qué Llegaste (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "No Temeré",
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - No Temeré (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "Razón de Vivir",
+    artist: "Anita Morán",
+    src: "songs/SpotiDownloader.com - Razón de Vivir - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "Esto Es Confiar",
+    artist: "Anita Morán",
+    src: "songs/Esto Es Confiar - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+  {
+    title: "Resucitó",
+    artist: "Anita Morán",
+    src: "songs/Resucitó - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
   },
   {
     title: "Cordero", //0
@@ -1698,43 +1740,19 @@ const playlist = [
 ];
 
 const playlistOrder = {
-  LikedSongs: [322, 323, 321, 320, 328, 327, 326, 307, 301, 297, 294, 293, 286, 287, 286, 285, 284, 259, 281, 282, 283, 279, 278, 310, 224, /*777, */152, 273, 309, 196, 109, 272, 284, /*a ciegas, estoy TRANQUILO, */262, 264, 261, 260, 258, 257, 250, 263, 254, 256, /*en DIOS tengo mas, DIOS nunca abandona, */255, /*promesas*/240, 239, 153, 236, 235, 234, 222, 111, 191, 219, /*rompiendo, */274, 194, 199, /*bye bye, */112, 190, 225, 101, 203, 110, 214, 210, 100, 209, 206, 205, 204, 202, 201, 197, 198, 165, 193, 200, 188, 119, 167, 113, 187, 163, 108, 120, 186, 107, 153, 152, 124, /*la fiesta, */157, 154, 156, 7, 6, 9, 142, 30, 5, 12, 29, /*eterno amor deluz, */2, /*escogido fui de dios 2002, */96, 97, 16, 76, 23, 20, 180, 181, 139, 12, 102, 97, 171, /*que mi fe no falle evan craft*/119, 103, 172, 208, 203, /*solo kim richards*/99, 96, 130, 215, 86, 125 /*<---pentagrama remix*/, 88, 114, 19, 123, 101, 129, 141, 136, 126, 125, 76, 139, 123, 220, /*montana*/115, 221, 134, 132, 138],
-  Worship: [340, 339, 337, 338, 330, 331, 332, 307, 324, 318, 317, 316, 315, 314, 313, 312, 311, 308, 62, 53, 238, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, /*266, 253, 267, 268, 269, 270, 271, */248, 59, 56, 14, 51, 66, 95, 15, 150, 149, 226, 237, 227, 228, 229, 252, 219, 151, 218, 16, 180, 83, 84, 85, 233, 232, 231, 230, 88, 90, 2, 7, 3, 4, 8, 9, 72, 173, 174, 175, 176, 177, 178, 10, 17, 18, 19, 20, 1, 0, 12, 23, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 37, 38, 40, 41, 44, 46, 49, 50, 54, 55, 57, 61, 63, 70, 71, 73, 74, 81, 91, 92],
-  Voceros: [149, 180, 5, 286, 293, 294, 285, 219, 6, 7, 181, 226, 233, 237, 232, 231, 230, 227, 228, 229, 252, 182, 183, 184, 185, 8, 10, 14, 19, 20, 21, 11, 22, 23, 29, 12, 30, 31, 48, 64, 13, 65, 75],
-  LockIn: [362, 350, 348, 347, 346, 326, 327, 255, 256, 254, 320, 321, 322, 323, 319, 272, 273, 274, 102, 283, 309, 310, 278, 279, 265, 262, 260, 259, 257, 258, 250, 236, 222, 111, 109, 152, 153, 166, 156, 224, 234, 220, 223, 198, 225, 200, 188, 197, 190, 189, 199, 196, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 191, 214, 235, 192, 193, 194, 195, 107, 187, 186, 110, 165, 119, 120, 155, 169, 167, 115, 108, 168, 113, 154, 157, 158, 159, 112, 114, 116, 100, 101, 103, 102, 96, 131, 97, 99, 118, 163, 106, 164, 123, 135, 162, 132, 215, 134, 133, 130, 136, 142, 125, 127, 124, 160, 83, 84, 85, 86, 87, 88, 161, 264, 239,  251, 249, 284, 328],
-  MUSIKO: [363, 343, 105, 342, 341, 340, 331, 328, 319, 102, 78, 325, 307, 281, 282, 239, 240, 251, 249, 170, 139, 272, 120, 188, 112, 284, 114, 321, 205, 204, 262, 203, 226, 233, 232, 227, 228, 229, 213, 206, 238, 288, 133, 140, 141, 145, 146, 130, 131, 126, 124, 125, 127, 187, 171, 172, 128, 129, 98, 99, 103, 123, 83, 84, 85, 86, 87, 88, 77, 79, 132, 215, 134, 133, 135, 136, 5, 6, 179, 216, 217, 274, 287, 241, 143, 298, 299, 300],
-  SerendipiaRemix: [241, 242, 204, 245, 246, 247, 251, 249, 243, 244, 116, 328, 329],
-  majoYDan: [145, 281, 139, 272, 141, 138, 137, 131, 146, 147, 148, 143, 144, 244],
-  cumpleaños: [275, 276, 277],
-  ROADTRIP: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 112, 114, 116, 119, 120, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 154, 161, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 187, 188, 199, 201, 202, 203, 204, 205, 206, 208, 210, 212, 213, 215, 216, 217, 218, 219, 225, 226, 227, 228, 229, 230, 231, 232, 233, 237, 238, 239, 240, 241, 242, 245, 246, 247, 248, 249, 251, 252, 257, 263, 264, 268, 272, 274, 281, 282, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 311, 312, 313, 314, 315, 316, 317, 318, 319, 321, 324, 325, 328, 329, 330, 331, 332, 337, 338, 339, 340, 341, 342, 343],
-  LocosComoYo :[255, 256, 265, 309, 198, 310, 283, 279, 278, 155, 224, 152, 153, 254, 120, 260, 320, 344, 345, 210, 322, 323, 234, 348, 362, 163, 197, 326, 327, 350, 351, 349, 333, 334, 335, 336, 352, 353, 354, 355, 356, 364, 357, 358, 359, 360, 361],
+  NoTemeréVol10: [10, 12, 16, 17, 18, 19, 20, 21, 22],
+  NecesitoTuPresenciaVol7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
   //make a playlist for the mothers day songs
 };
 
 const playlistHex = {
-  LikedSongs: "#523CA0",
-  Worship: "#8494DB",
-  Voceros: "#A81000",
-  LockIn: "#7C9BAB",
-  MUSIKO: "#A81088",
-  SerendipiaRemix : "#D83808",
-  majoYDan: "#6E5F63",
-  cumpleaños: "#174f47",
-  ROADTRIP: "#515151",
-  LocosComoYo: "#8F9787",
+  NoTemeréVol10: "#A74838",
+  NecesitoTuPresenciaVol7: "#AF2F67",
 };
 
 const playlistEndHex = {
-  LikedSongs: "#2A1E52",
-  Worship: "#282F6D",
-  Voceros: "#670100",
-  LockIn: "#1D3946",
-  MUSIKO: "#5E004A",
-  SerendipiaRemix: "#650000",
-  majoYDan: "#2D3B3B",
-  cumpleaños: "#013B34",
-  ROADTRIP: "#353535",
-  LocosComoYo: "#32382C",
+  NoTemeréVol10: "#650200",
+  NecesitoTuPresenciaVol7: "#630030",
 };
 
 async function getSongColors(imageUrl) {
@@ -2523,16 +2541,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   navAll.addEventListener('click', () => goToScreen(0));
-  navLibrary.addEventListener('click', () => goToScreen(0));
-  navPlaylists.addEventListener('click', () => goToScreen(0));
+  navLibrary.addEventListener('click', () => goToScreen(1));
+  navPlaylists.addEventListener('click', () => goToScreen(2));
 
   // Ensure correct initial state
-  goToScreen(0);
+  goToScreen(1);
 
   // Add back button functionality
   const libraryBackBtn = document.getElementById('libraryBackBtn');
   if (libraryBackBtn) {
-    libraryBackBtn.addEventListener('click', () => goToScreen(0));
+    libraryBackBtn.addEventListener('click', () => goToScreen(1));
   }
 
   function buildLibraryPlaylist(libKey) {
@@ -2587,6 +2605,7 @@ optionsBtn.addEventListener('click', (e) => {
       li.addEventListener('click', () => {
         openPlaylistBtn.style.opacity = 1;
         bottomBar.style.opacity = 1;
+   updatePlaylistLabel();
         usingLibraryQueue = true;
         
         playbackSource = libKey;
@@ -2610,7 +2629,7 @@ optionsBtn.addEventListener('click', (e) => {
       libraryPlaylistEl.appendChild(li);
     });
 
-    goToScreen(1); // Go to library playlist screen
+    goToScreen(2); // Go to library playlist screen
   }
 
   // Function to open library playlist
@@ -2915,6 +2934,7 @@ audio.addEventListener('play', () => {
   miniPlayer.classList.add('visible');
   openPlaylistBtn.style.opacity = 1;
   bottomBar.style.opacity = 1;
+   updatePlaylistLabel();
 });
 
 miniPlay.addEventListener('click', e => {
@@ -2933,6 +2953,7 @@ audio.addEventListener('play', () => {
   miniPause.style.display = 'block';
   openPlaylistBtn.style.opacity = 1;
   bottomBar.style.opacity = 1;
+   updatePlaylistLabel();
 });
 
 audio.addEventListener('pause', () => {
@@ -3097,6 +3118,7 @@ libraryBigPlay.addEventListener('click', () => {
   if (!currentLibraryQueue.length) return;
   openPlaylistBtn.style.opacity = 1;
   bottomBar.style.opacity = 1;
+   updatePlaylistLabel();
 
   currentPlaylist = playbackSource;
   updatePlaylistLabel();
@@ -3219,6 +3241,8 @@ if (song.video && !IS_DESKTOP) {
   title.textContent = song.title;
   artist.textContent = song.artist;
   openPlaylistBtn.style.opacity = 1;
+  bottomBar.style.opacity = 1;
+   updatePlaylistLabel();
 
   // Update cover immediately
   cover.src = song.cover;
@@ -3542,6 +3566,7 @@ function buildPlaylistUI(filterText = "") {
       li.addEventListener('click', () => {
         openPlaylistBtn.style.opacity = 1;
         bottomBar.style.opacity = 1;
+   updatePlaylistLabel();
   usingLibraryQueue = false;
 
   playbackSource = "All Songs";
