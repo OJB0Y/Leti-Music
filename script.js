@@ -140,6 +140,48 @@ const playlist = [
     cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
   },
   {
+    title: "Casa Nueva",
+    artist: "Anita Morán",
+    src: "songs/03 Track 3.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "Cruzando Por El Mundo",
+    artist: "Anita Morán",
+    src: "songs/05 Track 5.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "Que Sucederá",
+    artist: "Anita Morán",
+    src: "songs/06 Track 6.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "No Deves Llorar",
+    artist: "Anita Morán",
+    src: "songs/07 Track 7.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "Tus Obras",
+    artist: "Anita Morán",
+    src: "songs/08 Track 8.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "Limpia Mi Vida",
+    artist: "Anita Morán",
+    src: "songs/09 Track 9.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
+    title: "A donde Iré",
+    artist: "Anita Morán",
+    src: "songs/10 Track 10.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+  {
     title: "Cordero", //0
     artist: "Manuel Bonilla",
     src: "songs/Cordero.mp3",
@@ -1741,17 +1783,20 @@ const playlist = [
 
 const playlistOrder = {
   NoTemeréVol10: [10, 12, 16, 17, 18, 19, 20, 21, 22],
+  VencedorVol4: [13, 15, 23, 14, 24, 25, 26, 27, 28, 29],
   NecesitoTuPresenciaVol7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
   //make a playlist for the mothers day songs
 };
 
 const playlistHex = {
   NoTemeréVol10: "#A74838",
+  VencedorVol4: "#3b7125",
   NecesitoTuPresenciaVol7: "#AF2F67",
 };
 
 const playlistEndHex = {
   NoTemeréVol10: "#650200",
+  VencedorVol4: "#1e4a0c",
   NecesitoTuPresenciaVol7: "#630030",
 };
 
