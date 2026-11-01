@@ -242,6 +242,66 @@ const playlist = [
     cover: "images/Eres Libre Album.jpg",
   },
   {
+    title: "Tanto Amor",
+    artist: "Anita Morán",
+    src: "songs/Tanto amor.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Amado Mío",
+    artist: "Anita Morán",
+    src: "songs/Amado mio.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Te Necesito Dios",
+    artist: "Anita Morán",
+    src: "songs/Te necesito Dios.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Desde Que Te Conocí",
+    artist: "Anita Morán",
+    src: "songs/Desde que te conoci.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Día Alegre",
+    artist: "Anita Morán",
+    src: "songs/Dia alegre.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Ama al Señor",
+    artist: "Anita Morán",
+    src: "songs/Ama al Senor.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Lucharé",
+    artist: "Anita Morán",
+    src: "songs/Luchare.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Gracias Te Doy",
+    artist: "Anita Morán",
+    src: "songs/Gracias te doy.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "Cuando Se Pase Lista",
+    artist: "Anita Morán",
+    src: "songs/Cuando se pase lista.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
+    title: "No os Afanéis",
+    artist: "Anita Morán",
+    src: "songs/No os afaneis.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+  {
     title: "Cordero", //0
     artist: "Manuel Bonilla",
     src: "songs/Cordero.mp3",
@@ -1846,6 +1906,7 @@ const playlistOrder = {
   VencedorVol4: [13, 15, 23, 14, 24, 25, 26, 27, 28, 29],
   NecesitoTuPresenciaVol7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
   EresLibreVol9: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
+  TantoAmorVol9: [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
   //make a playlist for the mothers day songs
 };
 
@@ -1854,6 +1915,7 @@ const playlistHex = {
   VencedorVol4: "#3b7125",
   NecesitoTuPresenciaVol7: "#AF2F67",
   EresLibreVol9: "#773838",
+  TantoAmorVol9: "#3E3336",
 };
 
 const playlistEndHex = {
@@ -1861,6 +1923,7 @@ const playlistEndHex = {
   VencedorVol4: "#1e4a0c",
   NecesitoTuPresenciaVol7: "#630030",
   EresLibreVol9: "#5C2022",
+  TantoAmorVol9: "#2F363E",
 };
 
 async function getSongColors(imageUrl) {
