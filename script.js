@@ -182,6 +182,66 @@ const playlist = [
     cover: "images/Screenshot 2026-10-24 232609.png",
   },
   {
+    title: "Eres Libre",
+    artist: "Anita Morán",
+    src: "songs/Eres Libre.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Dulce Historia",
+    artist: "Anita Morán",
+    src: "songs/Dulce Historia.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Roca Eterna",
+    artist: "Anita Morán",
+    src: "songs/Roca Eterna.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Herido Fue",
+    artist: "Anita Morán",
+    src: "songs/Herido Fue.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Venciendo con Jesús",
+    artist: "Anita Morán",
+    src: "songs/Venciendo con Jesus.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Cantos de Júbilo",
+    artist: "Anita Morán",
+    src: "songs/Cantos de Jubilo.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Para Ti Mamá",
+    artist: "Anita Morán",
+    src: "songs/Para Ti Mama.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Cuando Te Conocí",
+    artist: "Anita Morán",
+    src: "songs/Cuando Te Conoci.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "Te quiero Papá",
+    artist: "Anita Morán",
+    src: "songs/Te quiero Papa.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
+    title: "La Puerta es Cristo",
+    artist: "Anita Morán",
+    src: "songs/La puerta es Cristo.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+  {
     title: "Cordero", //0
     artist: "Manuel Bonilla",
     src: "songs/Cordero.mp3",
@@ -1785,6 +1845,7 @@ const playlistOrder = {
   NoTemeréVol10: [10, 12, 16, 17, 18, 19, 20, 21, 22],
   VencedorVol4: [13, 15, 23, 14, 24, 25, 26, 27, 28, 29],
   NecesitoTuPresenciaVol7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  EresLibreVol9: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
   //make a playlist for the mothers day songs
 };
 
@@ -1792,12 +1853,14 @@ const playlistHex = {
   NoTemeréVol10: "#A74838",
   VencedorVol4: "#3b7125",
   NecesitoTuPresenciaVol7: "#AF2F67",
+  EresLibreVol9: "#773838",
 };
 
 const playlistEndHex = {
   NoTemeréVol10: "#650200",
   VencedorVol4: "#1e4a0c",
   NecesitoTuPresenciaVol7: "#630030",
+  EresLibreVol9: "#5C2022",
 };
 
 async function getSongColors(imageUrl) {
