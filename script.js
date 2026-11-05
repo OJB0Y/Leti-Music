@@ -1,1248 +1,53 @@
 const colorCache = {};
 
 const playlist = [
-  {
-    title: "Soy Peregrino", //0
-    artist: "Anita Morán",
-    src: "songs/Soy Peregrino - Anita Morán (Video Oficial) - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "NECESITO TU PRESENCIA", //1
-    artist: "Anita Morán",
-    src: "songs/NECESITO TU PRESENCIA- ANITA MORÁN (OFICIAL9 - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "Recuerdo del Calvario", //2
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - Recuerdo del Calvario (Video Letra) - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ", //3
-    artist: "Anita Morán",
-    src: "songs/DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ - Video Oficial  Anita Morán - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "Ama a tu Hermano", //4
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - Ama a tu Hermano (Video Oficial) - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "Solamente En Jesús", //5
-    artist: "Anita Morán",
-    src: "songs/Solamente En Jesús - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "El Espíritu de Dios", //3##
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - El Espíritu de Dios (Video Letra) - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "Matrimonio Feliz", //3##
-    artist: "Anita Morán",
-    src: "songs/Matrimonio Feliz - Anita Moran - PLAYLIST CRISTIANA.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "Mi Piloto", //3##
-    artist: "Anita Morán",
-    src: "songs/Mi Piloto - Anita Morán (Video Letra Oficial) - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "Perdón", //9
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - Perdón (Video Oficial) - Anita Morán.mp3",
-    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
-  },
-  {
-    title: "Nos Veremos en la Gloria", //10
-    artist: "Anita Morán",
-    src: "songs/NOS VEREMOS EN LA GLORIA - Anita Morán (VIDEO OFICIAL) - Anita Morán.mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Esa Roca",
-    artist: "Anita Morán",
-    src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
-    cover: "images/Cover of Esa Roca by Anita Morán.jpg",
-  },
-  {
-    title: "Bendeciré a Jehová",
-    artist: "Anita Morán",
-    src: "songs/Bendeciré a Jehová_spotdown.mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Vencedor",
-    artist: "Anita Morán",
-    src: "songs/Vencedor - Anita Moran.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "El Amor Que Me Das",
-    artist: "Anita Morán",
-    src: "songs/El Amor Que Me Das - Anita Moran.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "No Tardes",
-    artist: "Anita Morán",
-    src: "songs/No Tardes - Anita Moran.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "El Alfarero",
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - El Alfarero (SPOTISAVER).mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Tu Promesa",
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - Tu Promesa (SPOTISAVER).mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "El Día Qué Llegaste",
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - El Día Qué Llegaste (SPOTISAVER).mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "No Temeré",
-    artist: "Anita Morán",
-    src: "songs/Anita Morán - No Temeré (SPOTISAVER).mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Razón de Vivir",
-    artist: "Anita Morán",
-    src: "songs/SpotiDownloader.com - Razón de Vivir - Anita Morán.mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Esto Es Confiar",
-    artist: "Anita Morán",
-    src: "songs/Esto Es Confiar - Anita Morán.mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Resucitó",
-    artist: "Anita Morán",
-    src: "songs/Resucitó - Anita Morán.mp3",
-    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
-  },
-  {
-    title: "Casa Nueva",
-    artist: "Anita Morán",
-    src: "songs/03 Track 3.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "Cruzando Por El Mundo",
-    artist: "Anita Morán",
-    src: "songs/05 Track 5.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "Que Sucederá",
-    artist: "Anita Morán",
-    src: "songs/06 Track 6.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "No Deves Llorar",
-    artist: "Anita Morán",
-    src: "songs/07 Track 7.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "Tus Obras",
-    artist: "Anita Morán",
-    src: "songs/08 Track 8.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "Limpia Mi Vida",
-    artist: "Anita Morán",
-    src: "songs/09 Track 9.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "A donde Iré",
-    artist: "Anita Morán",
-    src: "songs/10 Track 10.mp3",
-    cover: "images/Screenshot 2026-10-24 232609.png",
-  },
-  {
-    title: "Eres Libre",
-    artist: "Anita Morán",
-    src: "songs/Eres Libre.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Dulce Historia",
-    artist: "Anita Morán",
-    src: "songs/Dulce Historia.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Roca Eterna",
-    artist: "Anita Morán",
-    src: "songs/Roca Eterna.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Herido Fue",
-    artist: "Anita Morán",
-    src: "songs/Herido Fue.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Venciendo con Jesús",
-    artist: "Anita Morán",
-    src: "songs/Venciendo con Jesus.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Cantos de Júbilo",
-    artist: "Anita Morán",
-    src: "songs/Cantos de Jubilo.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Para Ti Mamá",
-    artist: "Anita Morán",
-    src: "songs/Para Ti Mama.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Cuando Te Conocí",
-    artist: "Anita Morán",
-    src: "songs/Cuando Te Conoci.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Te quiero Papá",
-    artist: "Anita Morán",
-    src: "songs/Te quiero Papa.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "La Puerta es Cristo",
-    artist: "Anita Morán",
-    src: "songs/La puerta es Cristo.mp3",
-    cover: "images/Eres Libre Album.jpg",
-  },
-  {
-    title: "Tanto Amor",
-    artist: "Anita Morán",
-    src: "songs/Tanto amor.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Amado Mío",
-    artist: "Anita Morán",
-    src: "songs/Amado mio.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Te Necesito Dios",
-    artist: "Anita Morán",
-    src: "songs/Te necesito Dios.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Desde Que Te Conocí",
-    artist: "Anita Morán",
-    src: "songs/Desde que te conoci.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Día Alegre",
-    artist: "Anita Morán",
-    src: "songs/Dia alegre.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Ama al Señor",
-    artist: "Anita Morán",
-    src: "songs/Ama al Senor.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Lucharé",
-    artist: "Anita Morán",
-    src: "songs/Luchare.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Gracias Te Doy",
-    artist: "Anita Morán",
-    src: "songs/Gracias te doy.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Cuando Se Pase Lista",
-    artist: "Anita Morán",
-    src: "songs/Cuando se pase lista.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "No os Afanéis",
-    artist: "Anita Morán",
-    src: "songs/No os afaneis.mp3",
-    cover: "images/Tanto Amor Album.jpg",
-  },
-  {
-    title: "Cordero", //0
-    artist: "Manuel Bonilla",
-    src: "songs/Cordero.mp3",
-    cover: "images/song5.jpg",
-  },
-  {
-    title: "Escucharte Hablar / Dios Ha Sido Bueno",
-    artist: "Marcos Witt/Indiomar/Dariana",
-    src: "songs/SpotiDownloader.com - Escucharte Hablar _ Dios Ha Sido Bueno - Marcos Witt.mp3",
-    cover: "images/Cover of Escucharte Hablar _ Dios Ha Sido Bueno by Marcos Witt, Indiomar, Dariana (1).jpg",
-  },
-  {
-    title: "Como Una Flor Ft. Los Hermanos Reyes",
-    artist: "Hermanos Osorio, Los Hermanos Reyes",
-    src: "songs/Como Una Flor (Versión Los Hermanos Reyes).mp3",
-    cover: "images/Como Una Flor (Versión Los Hermanos Reyes).png",
-  },
-  {
-    title: "Que lindo es mi Cristo",
-    artist: "Wilson Camey, Los Hermanos Reyes",
-    src: "songs/Que lindo es mi Cristo.mp3",
-    cover: "images/Que lindo es mi Cristo.png",
-  },
-  {
-    title: "Confía En El Señor Ft Francisco Orantes",
-    artist: "Hermanos Osorio, Francisco Orantes",
-    src: "songs/Confía en el Señor - Hermanos Osorio.mp3",
-    cover: "images/orantes.png",
-  },
-  {
-    title: "Cuando Muera Yo Ft. Los Hermanos Reyes",//5
-    artist: "Los Voceros de Cristo, Los Hermanos Reyes",
-    src: "songs/Cuando Muera Yo.mp3",
-    cover: "images/Cuando Muera Yo.png",
-    video: "videos/Voceros2.mp4",
-  },
-  {
-    title: "A Tu Lado en el Cielo",
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - A Tu Lado en el Cielo - Los Voceros de Cristo.mp3",
-    cover: "images/Alvaro.jpg",
-    video: "videos/Voceros1.mp4"
-  },
-  {
-    title: "Es El Amor",
-    artist: "Duo Hermanos Devia",
-    src: "songs/SpotiDownloader.com - Es El Amor - Duo Hermanos Devia.mp3",
-    cover: "images/Cover of Es El Amor by Duo Hermanos Devia.jpg",
-  },
-  {
-    title: "Apocalipsis 15:3",//8
-    artist: "Los Voceros de Cristo/Armando Trujillo",
-    src : "songs/SpotiDownloader.com - Apocalipsis 15_3 - Los Voceros de Cristo.mp3",
-    cover: "images/su amor.jpg",
-  },
-  {
-    title: "Exitos de Recuerdos Ft. Los Hermanos Reyes",
-    artist: "Los Milagros de Cristo/Los Hermanos Reyes",
-    src: "songs/Exitos.mp3",
-    cover: "images/Cover of Exitos.jpg",
-  },
-  {
-    title: "Oh Alma Mía (2002)",
-    artist: "Los Voceros de Cristo",
-    src: "songs/a5.mp3",
-    cover: "images/a5.png",
-  },
-  {
-    title: "Escogido Fui de Dios (2025)",
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Escogido fui de Dios (Nuevos Horizontes) - Los Voceros de Cristo.mp3",
-    cover: "images/Cover of Escogido fui de Dios (Nuevos Horizontes) by Los Voceros de Cristo.jpg",
-    hex: "#8F2727",
-    barColor: "#130069ff"
-  },
-  {
-    title: "Yo Te Esperare",//15
-    artist: "Los Hermanos Reyes",
-    src: "songs/Reyes.mp3",
-    cover: "images/Hay una ciudad.png",
-    hex: "#b09539ff",
-    barColor: "#e4b20dff"
-  },
-  {
-    title: "Soy Feliz",
-    artist: "Los Hermanos Reyes",
-    src: "songs/Soy feliz.mp3",
-    cover: "images/He peleado la batalla.png",
-    hex: "#787053ff",
-    barColor: "#ac943fff"
-  },
-  {
-    title: "La Biblia",
-    artist: "Manuel Bonilla",
-    src: "songs/song2.mp3",
-    cover: "images/song2.jpg",
-    hex: "#942409",
-    barColor: "#df2d00ff"
-  },
-  {
-    title: "En Mi Casa Vive Jesús",
-    artist: "Francisco Orantes/Marilú Orantes",
-    src: "songs/SpotiDownloader.com - En Mi Casa Vive Jesús - Francisco Orantes.mp3",
-    cover: "images/Cover of En Mi Casa Vive Jesús by Francisco Orantes.jpg",
-    hex: "#628ABF",
-    barColor: "#3287f5ff"
-  },
-  {
-    title: "Loor a ti mi Dios v2",
-    artist: "Los Voceros de Cristo",
-    src: "songs/Loor2.mp3",
-    cover: "images/a5.png",
-    hex: "#3A3436",
-    barColor: "#726065ff"
-  },
-  {
-    title: "Mi cántaro vacío",//20
-    artist: "Los Voceros de Cristo",
-    src: "songs/cántaro.mp3",
-    cover: "images/a5.png",
-    hex: "#3A3436",
-    barColor: "#726065ff"
-  },
-  {
-    title: "Loor A Ti Mi Dios (2024)",
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Loor A Ti Mi Dios - En Vivo Desde El Salvador - Los Voceros de Cristo.mp3",
-    cover: "images/Cover of Loor A Ti Mi Dios - En Vivo Desde El Salvador by Los Voceros de Cristo.jpg",
-    hex: "#609FB6",
-    barColor: "#31b6e7ff"
-  },
-  {
-    title: "Escogido Fui de Dios (2024)",
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Escogido Fui de Dios - En Vivo Desde El Salvador - Los Voceros de Cristo.mp3",
-    cover: "images/Cover of Loor A Ti Mi Dios - En Vivo Desde El Salvador by Los Voceros de Cristo.jpg",
-    hex: "#609FB6",
-    barColor: "#25b4e8ff"
-  },
-  {
-    title: "El volverá", //23
-    artist: "Los Voceros de Cristo/Aníbal Marroquín",
-    src: "songs/volverá.mp3",
-    cover: "images/new4.png",
-    hex: "#313831",
-    barColor: "#527052ff"
-  },
-  {
-    title: "Que Feliz Estoy",//24
-    artist: "Francisco Orantes",
-    src: "songs/SpotiDownloader.com - Que Feliz Estoy - Francisco Orantes.mp3",
-    cover: "images/song10.png",
-    hex: "#A16962",
-    barColor: "#b84e40ff"
-  },
-  {
-    title: "Por Herencia",//25
-    artist: "Francisco Orantes/Marilú Orantes",
-    src: "songs/Por Herencia.mp3",
-    cover: "images/Por Herencia.jpg",
-    hex: "#5a240cff",
-    barColor: "#992e00ff"
-  },
-  {
-    title: "Jesús",//26
-    artist: "Francisco Orantes",
-    src: "songs/Jesús.mp3",
-    cover: "images/Jesús.jpg",
-    hex: "#08186C",
-    barColor: "#001db0ff"
-  },
-  {
-    title: "Necesito De Ti",//27
-    artist: "Francisco Orantes",
-    src: "songs/Necesito De Ti.mp3",
-    cover: "images/song10.png",
-    hex: "#A16962",
-    barColor: "#b84e40ff"
-  },
-  {
-    title: "Te Necesito",//28
-    artist: "Los Hermanos Reyes",
-    src: "songs/Te necesito.mp3",
-    cover: "images/Hay una ciudad.png",
-    hex: "#bb9b31ff",
-    barColor: "#d3a50cff"
-  },
-  {
-    title: "Su amor siempre es su amor",//29
-    artist: "Los Voceros de Cristo/Ruth E. Gomez",
-    src: "songs/su amor.mp3",
-    cover: "images/su amor.jpg",
-    hex: "#313831",
-    barColor: "#527052ff"
-  },
-  {
-    title: "La Perdida Oveja",//30
-    artist: "Los Voceros de Cristo/Leonel Tuchez",
-    src: "songs/La perdida oveja.mp3",
-    cover: "images/a5.png",
-    hex: "#3A3436",
-    barColor: "#726065ff"
-  },
-  {
-    title: "La Biblia dice que el hombre",
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - La Biblia dice que el hombre - Los Voceros de Cristo.mp3",
-    cover: "images/Cover of La Biblia dice que el hombre by Los Voceros de Cristo.jpg",
-    hex: "#9D8627",
-    barColor: "#c39c00ff"
-  },
-  {
-    title: "Te Doy Gracias",
-    artist: "Los Hermanos Reyes/Leonel Tuchez",
-    src: "songs/song27.mp3",
-    cover: "images/song27.png",
-    hex: "#383838",
-    barColor: "#6b5a3bff"
-  },
-  {
-    title: "Nicodemo",
-    artist: "Leonel Tuchez",
-    src: "songs/Nicodemo.mp3",
-    cover: "images/Esperando.jpg",
-    hex: "#854b6fff",
-    barColor: "#be408eff"
-  },
-  {
-    title: "Amartesolo a ti Señor",
-    artist: "Los Hermanos Reyes",
-    src: "songs/Amarte.mp3",
-    cover: "images/Hay un Dios.png",
-    hex: "#0b2f43ff",
-    barColor: "#025988ff"
-  },
-  {
-    title: "Que Bueno es El Señor",//35
-    artist: "Los Hermanos Reyes",
-    src: "songs/Que Bueno es El Señor.mp3",
-    cover: "images/Que Bueno es El Señor.png",
-    hex: "#6f2d5cff",
-    barColor: "#950e71ff"
-  },
-  {
-    title: "He peleado la batalla",
-    artist: "Los Hermanos Reyes",
-    src: "songs/He peleado la batalla.mp3",
-    cover: "images/He peleado la batalla.png",
-    hex: "#787053ff",
-    barColor: "#967f2cff"
-  },
-  {
-    title: "Si Mi Pueblo Se Humillare",
+    {
+    title: "Que Mi Fe No Falle", //0
+    artist: "Evan Craft",
+    src: "songs/SpotiDownloader.com - Que Mi Fe No Falle - Evan Craft.mp3",
+    cover: "images/Más_Rico_Del_Mundo.png",
+    video: "videos/EvanCraft2.mp4",
+  },
+    {
+    title: "Si Mi Pueblo Se Humillare", //1
     artist: "Los Hermanos Reyes",
     src: "songs/pueblo.mp3",
     cover: "images/Hay un Dios.png",
     hex: "#0b2f43ff",
     barColor: "#025c8cff"
   },
-  {
-    title: "Tengo un Dios",
-    artist: "Los Hermanos Reyes",
-    src: "songs/Tengo un Dios.mp3",
-    cover: "images/Tengo un Dios.png",
-    hex: "#787053ff",
-    barColor: "#907926ff"
+    {
+    title: "Increíble", //2
+    artist: "Miel San Marcos, Evan Craft",
+    src: "songs/SpotiDownloader.com - Increíble (feat. Evan Craft) - Miel San Marcos.mp3",
+    cover: "images/Cover of No Hay Lugar Mas Alto (feat. Christine D Clario) by Miel San Marcos, Christine D'Clario.jpg",
   },
-  {
-    title: "Hay un Dios",
-    artist: "Los Hermanos Reyes",
-    src: "songs/Hay un Dios.mp3",
-    cover: "images/Hay un Dios.png",
-    hex: "#0b2f43ff",
-    barColor: "#005f92ff"
+    {
+    title: "El Amor Que Me Das", //3
+    artist: "Anita Morán",
+    src: "songs/El Amor Que Me Das - Anita Moran.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
   },
-  {
-    title: "Hay una Ciudad",//40
-    artist: "Los Hermanos Reyes",
-    src: "songs/Hay una ciudad.mp3",
-    cover: "images/Hay una ciudad.png",
-    hex: "#b09539ff",
-    barColor: "#e0ac02ff"
+    {
+    title: "Te quiero Papá", //4
+    artist: "Anita Morán",
+    src: "songs/Te quiero Papa.mp3",
+    cover: "images/Eres Libre Album.jpg",
   },
-  {
-    title: "Alla en los Olivos",
-    artist: "Los Hermanos Reyes",
-    src: "songs/Alla en los olivos.mp3",
-    cover: "images/Hay una ciudad.png",
-    hex: "#b19433ff",
-    barColor: "#e5b003ff"
+    {
+    title: "DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ", //5
+    artist: "Anita Morán",
+    src: "songs/DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ - Video Oficial  Anita Morán - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
-  {
-    title: "Como una Flor",
-    artist: "Los Hermanos Reyes",
-    src: "songs/song19.mp3",
-    cover: "images/song19.png",
-    hex: "#383838",
-    barColor: "#676536ff"
+    {
+    title: "Ama a tu Hermano", //6
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Ama a tu Hermano (Video Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
-  {
-    title: "Como Una Flor - (EN VIVO)",
-    artist: "Wilson Camey/Los Hermanos Reyes",
-    src: "songs/Como Una Flor - En vivo - Wilson Camey.mp3",
-    cover: "images/wilson.png",
-    hex: "#2F5F87",
-    barColor: "#0057c0ff"
-  },
-  {
-    title: "Alto Precio - (EN VIVO)",
-    artist: "Wilson Camey/Los Hermanos Reyes",
-    src: "songs/Alto Precio - En vivo - Wilson Camey.mp3",
-    cover: "images/wilson.png",
-    hex: "#2F5F87",
-    barColor: "#0057c0ff"
-  },
-  {
-    title: "Alto Precio",//45
-    artist: "Los Hermanos Reyes",
-    src: "songs/Alto Precio.mp3",
-    cover: "images/song27.png",
-    hex: "#383838",
-    barColor: "#676536ff"
-  },
-  {
-    title: "Que Contento Estoy - (EN VIVO)",
-    artist: "Wilson Camey/Los Hermanos Reyes",
-    src: "songs/Que Contento Estoy - En vivo - Wilson Camey.mp3",
-    cover: "images/wilson.png",
-    hex: "#2F5F87",
-    barColor: "#0057c0ff"
-  },
-  {
-    title: "Contento Estoy",
-    artist: "Los Hermanos Reyes",
-    src: "songs/Contento Estoy.mp3",
-    cover: "images/song27.png",
-    hex: "#383838",
-    barColor: "#676536ff"
-  },
-  {
-    title: "Jesús es mi Refugio",
-    artist: "Los Voceros de Cristo",
-    src: "songs/Refugio.mp3",
-    cover: "images/new3.png",
-    hex: "#582820",
-    barColor: "#941b06ff"
-  },
-  {
-    title: "Vivir Cantado",
-    artist: "Julio Elias",
-    src: "songs/Julio Elias.mp3",
-    cover: "images/Julio Elias.png",
-    hex: "#8c3d2fff",
-    barColor: "#a11901ff"
-  },
-  {
-    title: "Buscale",//50
-    artist: "Óscar Medina",
-    src: "songs/Buscale.mp3",
-    cover: "images/Buscale.jpg",
-    hex: "#836531",
-    barColor: "#b56702ff"
-  },
-  {
-    title: "Te Estoy Esperando",
-    artist: "Leonel Tuchez",
-    src: "songs/Esperando.mp3",
-    cover: "images/Esperando.jpg",
-    hex: "#854b6fff",
-    barColor: "#a90b6dff"
-  },
-  {
-    title: "Tengo Un Dios - Julio Elías",
-    artist: "Julio Elias",
-    src: "songs/Tengo Un Dios - Julio Elías.mp3",
-    cover: "images/cover1.jpg",
-  },
-  {
-    title: "Agradecimiento",
-    artist: "Manuel Bonilla",
-    src: "songs/Agradecimiento - Manuel Bonilla.mp3",
-    cover: "images/manuel.png",
-  },
-  {
-    title: "Todo el Mundo Busca",
-    artist: "Wilson Camey",
-    src: "songs/Todo el Mundo Busca - Wilson Camey.mp3",
-    cover: "images/wc.png",
-  },
-  {
-    title: "Tu Fidelidad",//55
-    artist: "Marcos Witt/Alex Campos",
-    src: "songs/a6.mp3",
-    cover: "images/a6.png",
-  },
-  {
-    title: "Me Dicen Que Me Aman",
-    artist: "Jesús Adrián Romero",
-    src: "songs/a4.mp3",
-    cover: "images/a4.png",
-  },
-  {
-    title: "Renuévame",
-    artist: "Marcos Witt",
-    src: "songs/a2.mp3",
-    cover: "images/a2.png",
-    hex: "#0E434A",
-    barColor: "#006c7bff"
-  },
-  {
-    title: "Quien me podrá separar",
-    artist: "Los Hermanos Reyes",
-    src: "songs/a3.mp3",
-    cover: "images/a3.png",
-    hex: "#17494eff",
-    barColor: "#01747eff"
-  },
-  {
-    title: "En Paz",
-    artist: "Daniel Calveti",
-    src: "songs/a1.mp3",
-    cover: "images/a1.png",
-    hex: "#616060ff",
-    barColor: "#a3a3a3"
-  },
-/*  {
-    title: "Prometí aceptar tu palabra",
-    artist: "Julio Elias",
-    src: "songs/Prometí aceptar tu palabra.mp3",
-    cover: "images/cover2.jpg"
-  },*/
-  {
-    title: "Primero Dios, Vol. 5",//60
-    artist: "Agustin Amador",
-    src: "songs/Primero Dios, Vol. 5.mp3",
-    cover: "images/cover3.jpg",
-  },
-  {
-    title: "Ahora Soy Feliz",
-    artist: "Los Hermanos Reyes",
-    src: "songs/song1.mp3",
-    cover: "images/song1.jpg",
-  },
-  {
-    title: "Un Grano de Arena",
-    artist: "Manuel Bonilla",
-    src: "songs/Un Grano De Arena.mp3",
-    cover: "images/Un Grano De Arena.png",
-  },
-{ 
-    title: "Oh Juventud",
-    artist: "Zulmy Mejia",
-    src: "songs/Zulmy.mp3",
-    cover: "images/zulmy.jpg",
-},
-{
-    title: "Cristo por su Iglesia viene",
-    artist: "Los Voceros de Cristo",
-    src: "songs/Cristo.mp3",
-    cover: "images/Cristo.jpg",
-},
-{
-    title: "Loor a ti mi Dios",//65
-    artist: "Los Voceros de Cristo",
-    src: "songs/Loor.mp3",
-    cover: "images/Loor.jpg",
-    hex: "#783800",
-    barColor: "#ca5e00ff"
-},
-{
-    title: "Todos Deben de Saber/Conocer",
-    artist: "Los Hermanos Reyes/Manuel Bonilla",
-    src: "songs/song28.mp3",
-    cover: "images/song28.png",
-    hex: "#968E90",
-    barColor: "#c5c55aff"
-},
-{
-    title: "Esa Roca",//67
-    artist: "Francisco Orantes",
-    src: "songs/song3.mp3",
-    cover: "images/song3.jpg",
-    hex: "#236394ff",
-    barColor: "#259423ff"
-},
-{
-    title: "El Amor de Dios",
-    artist: "Manuel Bonilla",
-    src: "songs/song4.mp3",
-    cover: "images/song4.jpg",
-    hex: "#2F4617",
-    barColor: "#447e06ff"
-},
-{
-    title: "En El Monte Cavalrio",
-    artist: "Manuel Bonilla",
-    src: "songs/song5.mp3",
-    cover: "images/song5.jpg",
-    hex: "#003D03",
-    barColor: "#00a108ff"
-},
-{
-    title: "No Te Voy A Dejar",//70
-    artist: "Leonel Tuchez",
-    src: "songs/song6.mp3",
-    cover: "images/song6.png",
-    hex: "#854b6fff",
-    barColor: "#cf1989ff"
-},
-{
-    title: "Supe Que Me Amabas",
-    artist: "Marcela Gandara",
-    src: "songs/song7.mp3",
-    cover: "images/song7.png",
-    hex: "#9B4A3C",
-    barColor: "#d74c10ff"
-},
-{
-    title: "A Quien Iremos",
-    artist: "Los Hermanos Reyes",
-    src: "songs/song8.mp3",
-    cover: "images/song8.png",
-    hex: "#383838",
-    barColor: "#676536ff"
-},
-{
-    title: "Llegó el Amor",
-    artist: "Aníbal Marroquin",
-    src: "songs/song9.mp3",
-    cover: "images/song9.png",
-    hex: "#7D2708",
-    barColor: "#c93601ff"
-},
-{
-    title: "Confía En El Señor",
-    artist: "Francisco Orantes",
-    src: "songs/song10.mp3",
-    cover: "images/song10.png",
-    hex: "#94625bff",
-    barColor: "#bd4232ff"
-},
-{
-    title: "Escogido fui de Dios",//75
-    artist: "Los Voceros de Cristo",
-    src: "songs/song11.mp3",
-    cover: "images/song11.png",
-    hex: "#91190A",
-    barColor: "#d11800ff"
-},
-{
-    title: "Todo Va a Estar Bien",
-    artist: "Redimi2/Evan Craft",
-    src: "songs/Bienn.mp3",
-    cover: "images/Bien.jpg",
-    hex: "#747474",
-    barColor: "#a397bcff"
-},
-{
-    title: "Más Rico Del Mundo",
-    artist: "Evan Craft",
-    src: "songs/Más_Rico_Del_Mundo.mp3",
-    cover: "images/Más_Rico_Del_Mundo.png",
-    hex: "#0083A5",
-    barColor: "#00cd8fff"
-},
-{
-    title: "La Milla Extra",
-    artist: "Evan Craft",
-    src: "songs/La Milla Extra.mp3",
-    cover: "images/La Milla Extra.png",
-    hex: "#7E393C",
-    barColor: "#aa123dff"
-},
-{
-    title: "Desesperado",
-    artist: "Evan Craft",
-    src: "songs/Desesperado.mp3",
-    cover: "images/evan.png",
-    hex: "#186B5D",
-    barColor: "#01ad91ff",
-},
-{
-    title: "Sueños",//80
-    artist: "Un Corazón",
-    src: "songs/song14.mp3",
-    cover: "images/suenos.jpg",
-    hex: "#504878",
-    barColor: "#2204b3ff",
-},
-{
-    title: "¿Cómo Podré Pagarte?",
-    artist: "Leonel Tuchez",
-    src: "songs/song15.mp3",
-    cover: "images/song15.png",
-    hex: "#632D07",
-    barColor: "#ca5501ff",
-},
-{
-    title: "Más Que Nunca Ft. Danilo Montero",
-    artist: "Un Corazón",
-    src: "songs/song16.mp3",
-    cover: "images/song16.png",
-    hex: "#464D2E",
-    barColor: "#6f881bff",
-},
-{
-    title: "Cuando Te Encontré",
-    artist: "Rojo/Strings & Heart",
-    src: "songs/Cuando (1).mp3",
-    cover: "images/Cuando.jpg",
-    hex: "#949494",
-    barColor: "#94a9d3ff",
-},
-{
-    title: "Eres Todopoderoso",
-    artist: "Rojo",
-    src: "songs/song12.mp3",
-    cover: "images/song12.png",
-    hex: "#680519",
-    barColor: "#ad0330ff",
-},
-{
-    title: "Tu Amor Hace Eco En Todo Mi Universo", //85
-    artist: "Rojo",
-    src: "songs/song17.mp3",
-    cover: "images/song17.png",
-    hex: "#727272",
-    barColor: "#dbb8b8ff",
-},
-{
-    title: "Es Lo Que Quiero",
-    artist: "Emmanuel y Linda",
-    src: "songs/Es Lo Que Quiero.mp3",
-    cover: "images/Es Lo Que Quiero.png",
-    hex: "#9c3270ff",
-    barColor: "#db24a4ff"
-},
-{
-    title: "Si No Fuera Por Ti",
-    artist: "Rojo",
-    src: "songs/Si No Fuera Por Ti.mp3",
-    cover: "images/Si No Fuera Por Ti.png",
-    hex: "#959595",
-    barColor: "#94a9d3ff"
-},
-{
-    title: "Siguiéndote Los Pasos",
-    artist: "Rojo",
-    src: "songs/Pasos.mp3",
-    cover: "images/song17.png",
-    hex: "#727272",
-    barColor: "#dbb8b8ff"
-},
-{
-    title: "Deja las Drogas",//90
-    artist: "Aníbal Marroquín",
-    src: "songs/song22.mp3",
-    cover: "images/song22.png",
-    hex: "#740800",
-    barColor: "#d40e00ff"
-},
-{
-    title: "A Luchar Hermano",
-    artist: "Aníbal Marroquín",
-    src: "songs/song23.mp3",
-    cover: "images/song23.png",
-    hex: "#7D2708",
-    barColor: "#e23c00ff"
-},
-{
-    title: "Josué 1: 8 Y 9",
-    artist: "Leonel Tuchez",
-    src: "songs/song24.mp3",
-    cover: "images/song24.png",
-    hex: "#662F08",
-    barColor: "#db5b00ff"
-},
-{
-    title: "Los Que Esperan En Jehová",
-    artist: "Manuel Bonilla",
-    src: "songs/Esperan.mp3",
-    cover: "images/new5.png",
-    hex: "#961410",
-    barColor: "#d9036eff"
-},
-{
-    title: "He Peleado la Batalla",
-    artist: "Luismi Acosta y Gloria de Dios",
-    src: "songs/Luismi.mp3",
-    cover: "images/new1.png",
-    hex: "#AC6F00",
-    barColor: "#f88400ff"
-},
-{
-    title: "Que Bueno Es El Señor",//95
-    artist: "Luismi Acosta y Gloria de Dios",
-    src: "songs/SpotiDownloader.com - Que bueno es el Señor - Luismi Acosta y Gloria de Dios.mp3",
-    cover: "images/new1.png",
-},
-{
-    title: "GOZO",
-    artist: "Miel San Marcos/Redimi2",
-    src: "songs/GOZO.mp3",
-    cover: "images/gozo.jpg",
-},
-{
-    title: "El Nombre De Jesús",//100
-    artist: "Redimi2, Christine D'Clario",
-    src: "songs/Nombre.mp3",
-    cover: "images/image (5).png",
-    video: "videos/Redimi2.mp4"
-},
-{
-    title: "Espíritu Santo",
-    artist: "Redimi2, Barak",
-    src: "songs/Espíritu.mp3",
-    cover: "images/image (5).png",
-},
-{
-    title: "Viviré",
-    artist: "Redimi2, Evan Craft",
-    src: "songs/Viviré.mp3",
-    cover: "images/image (6).png",
-},
-{
-    title: "NO HAY NADA IMPOSIBLE",
-    artist: "Redimi2/Danny Gokey",
-    src: "songs/Gokey.mp3",
-    cover: "images/Gokey.jpg",
-    video: "videos/Redimi8.mp4",
-},
-{
-    title: "Gracias Gracias Gracias",
-    artist: "Redimi2/Madiel Lara",
-    src: "songs/SpotiDownloader.com - Gracias Gracias Gracias - Redimi2.mp3",
-    cover: "images/Cover of Flipando by Redimi2, Natan El Profeta.jpg",
-},
-{
-    title: "INFINITO",
-    artist: "Madiel Lara",
-    src: "songs/SpotiDownloader.com - INFINITO - Madiel Lara.mp3",
-    cover: "images/Cover of INFINITO by Madiel Lara.jpg",
-    hex: "#D28432",
-    barColor: "#ffdf89ff",
-    video: "videos/MadielLara2.mp4",
-},
-{
-    title: "Mi Padre",
-    artist: "Redimi2, Samantha Kate, Distrito Royal",
-    src: "songs/padre.mp3",
-    cover: "images/puede.jpg",
-    hex: "#70918b",
-    barColor: "#ac9250ff"
-},
-{
-    title: "Mi Dios Puede",//120
-    artist: "Redimi2/Sarai Rivera",
-    src: "songs/puede.mp3",
-    cover: "images/puede.jpg",
-    hex: "#6B8681",
-    barColor: "#ac9250ff"
-},
-{
-    title: "Be Alright",
-    artist: "Evan Craft, Danny Gokey, Redimi2",
-    src: "songs/Be Alright.mp3",
-    cover: "images/alrighty.jpg",
-    hex: "#443124",
-    barColor: "#acc508d9",
-    video: "videos/Redimi3.mp4"
-},
-{
-    title: "Eres Mi Bendicion",
-    artist: "Funky, Alex Zurdo",
-    src: "songs/SpotiDownloader.com - Eres Mi Bendicion (feat. Alex Zurdo) - Funky.mp3",
-    cover: "images/Cover of Eres Mi Bendicion (feat. Alex Zurdo) by Funky, Alex Zurdo.jpg",
-    hex: "#484060",
-    barColor: "979ec9d9"
-},
-{
-    title: "Pentagrama",//125
-    artist: "Alex Zurdo",
-    src: "songs/Penta.mp3",
-    cover: "images/Penta.jpg",
-    lrc: "LRC files/Pentagrama - Alex Zurdo.lrc",
-},
-{
-    title: "Empezar de Nuevo",
-    artist: "Kike Pavón/Funky",
-    src: "songs/Empezar.mp3",
-    cover: "images/kiki.png",
-    lrc: "LRC files/Empezar de Nuevo - Kike Pavón, Funky.lrc",
-},
-{
-    title: "Todo Lo Has Cambiado",
-    artist: "Danilo Montero/Su Presencia/Thalles Roberto/Victoria Montero",
-    src: "songs/Cambiado.mp3",
-    cover: "images/Cambiado.jpg",
-    hex: "#9E1F10",
-    barColor: "#7de6f9ff"
-},
-{
-    title: "Cuando Yo Te Conocí",
-    artist: "Alex Zurdo",
-    src: "songs/Cuando.mp3",
-    cover: "images/Penta.jpg",
-    hex: "#A81A77",
-    barColor: "#1aa8a6ff"
-},
-{
-    title: "Tú Me Llamas (feat. Musiko)",//130
-    artist: "Deluz/Musiko",
-    src: "songs/llamas.mp3",
-    cover: "images/llamas.jpg",
-    hex: "#64362E",
-    barColor: "#de9444ff"
-},
-{
-    title: "Solo tú",
-    artist: "Un Corazón, Lead, Kim Richards, Louie Abrego",
-    src: "songs/Solo tú.mp3",
-    cover: "images/image (3).png",
-},
-{
-    title: "Fiesta",
-    artist: "Un Corazón/Louie Abrego/Kim Richards/Alex Zurdo",
-    src: "songs/Fiesta.mp3",
-    cover: "images/song14.png",
-},
-{
-    title: "Gracias (Remix)",
-    artist: "Majo y Dan/Musiko",
-    src: "songs/G_Remix.mp3",
-    cover: "images/G_Remix.jpg",
-},
-{
-    title: "Que Pase El Mundo",
-    artist: "Majo y Dan",
-    src: "songs/song6 (1).mp3",
-    cover: "images/song6 (1).png",
-    video: "videos/majoYDan1.mp4",
-    lrc: "LRC files/Que Pase El Mundo - Majo y Dan.lrc",
-},
-{
-    title: "Gracias",
-    artist: "Majo y Dan, Musiko",
-    src: "songs/song7 (1).mp3",
-    cover: "images/song7 (1).png",
-    video: "videos/gracias.mp4",
-    lrc: "LRC files/Gracias - Majo y Dan, Musiko.lrc",
-},
-{
-    title: "Es por Fe",//140
-    artist: "Generación 12/Musiko/Stefy Espinosa",
-    src: "songs/SpotiDownloader.com - Es por Fe - Generación 12.mp3",
-    cover: "images/Cover of Es por Fe by Generación 12, Musiko, Stefy Espinosa.jpg",
-    hex: "#77676F",
-    barColor: "#eecbddd8",
-},
-{
-    title: "Si Puedes Creer",
-    artist: "Musiko/Majo y Dan",
-    src: "songs/Si Puedes Creer.mp3",
-    cover: "images/Si Puedes Creer.png",
-    hex: "#C31307",
-    barColor: "#e7c20cff"
-},
-{
-    title: "Lo Que Pasó Pasó",
-    artist: "Musiko/Pedro Pablo Quintero",
-    src: "songs/SpotiDownloader.com - Lo Que Pasó Pasó - Musiko.mp3",
-    cover: "images/Cover of Lo Que Pasó Pasó by Musiko, Pedro Pablo Quintero.jpg",
-    hex: "#EE3F2F",
-    barColor: "#f6beb9",
-    lrc: "LRC files/Lo Que Paso Paso.lrc",
-},
-{
-    title: "Vida Encontré",//145
-    artist: "Majo y Dan",
-    src: "songs/song13.mp3",
-    cover: "images/song13.png",
-    video: "videos/majoYDan2.mp4",
-    lrc: "LRC files/Vida Encontré - Majo y Dan.lrc",
-},
-  /*CHRISTMAS SONGS
-  {
-    title: "Ha Nacido (Venid y Adoremos)",
-    artist: "Un Corazón",
-    src: "songs/nacido.mp3",
-    cover: "images/nacido.jpg",
-    hex: "#367DBA"
-  },
-  {
-    title: "Gloria en las Alturas",
-    artist: "Jonathan & Sarah Jerez",
-    src: "songs/gloria.mp3",
-    cover: "images/gloria.jpg",
-    hex: "#88979F"
-  },
-  {
-    title: "Medley Navideño",
-    artist: "Los Hermanos Osorio, Evelyn Edith GT",
-    src: "songs/medley.mp3",
-    cover: "images/medley.png",
-    hex: "#1a3c14ff"
-  },*/
-{
-    title: "En Las Penas de Mi Alma Ft. Los Voceros de Cristo",//149
-    artist: "Los Milagros de Cristo/Los Voceros de Cristo",
-    src: "songs/Los Milagros de Cristo ft. Los Voceros de Cristo - En Las Penas de Mi Alma - 35 Años (En Vivo)_320p.mp3",
-    cover: "images/Cover of Exitos.jpg",
-    hex: "#1e233f",
-    barColor: "#041ec4d7",
-    video: "videos/Voceros3.mp4",
-},
-{
-    title: "Salmo 23",// 150
-    artist: "Leonel Tuchez",
-    src: "songs/SpotiDownloader.com - Salmo 23 - Leonel Tuchez.mp3",
-    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
-    hex: "#9E9698",
-    barColor: "#8fdac3"
-},
-{
-    title: "Esta Cayendo",
-    artist: "Jose Luis Reyes",
-    src: "songs/SpotiDownloader.com - Esta Cayendo - Jose Luis Reyes.mp3",
-    cover: "images/Cover of Esta Cayendo by Jose Luis Reyes.jpg",
-    hex: "#5E5759",
-    barColor: "#cfc978"
-},
-{
-    title: "Abba",
-    artist: "Redimi2/Distrito Royal/Samantha Kate",
-    src: "songs/SpotiDownloader.com - Abba - Redimi2.mp3",
-    cover: "images/Cover of Flipando by Redimi2, Natan El Profeta.jpg",
-    hex: "#1b5d9f",
-    barColor: "#f7cd24ff",
-},
-  {
-    title: "SIMPLICIDAD", //170
+    {
+    title: "SIMPLICIDAD", //7
     artist: "Funky/Vaes",
     src: "songs/SpotiDownloader.com - SIMPLICIDAD - Funky.mp3",
     cover: "images/Cover of SIMPLICIDAD by Funky, Vaes.jpg",
@@ -1250,118 +55,536 @@ const playlist = [
     barColor: "#c7fcfc",
     video: "videos/Funky1.mp4"
   },
-  {
-    title: "Correré a Ti",
+    {
+    title: "Gracias Te Doy", //8
+    artist: "Anita Morán",
+    src: "songs/Gracias te doy.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Sol en día nublado", //9
+    artist: "Majo y Dan, Vaes",
+    src: "songs/SpotiDownloader.com - Sol en día nublado - Majo y Dan.mp3",
+    cover: "images/Cover of Sol en día nublado by Majo y Dan, Vaes.jpg",
+    video: "videos/majoYDan4.mp4",
+    lrc: "LRC files/Sol en día nublado - Majo y Dan, Vaes.lrc",
+  },
+    {
+    title: "Espiritu Santo", //10
+    artist: "Zulmy Mejia",
+    src: "songs/SpotiDownloader.com - Espiritu Santo - Zulmy Mejia.mp3",
+    cover: "images/zulmy.jpg",
+  },
+    {
+    title: "Alaba", //11
+    artist: "Evan Craft, Intimidad Worship",
+    src: "songs/Alaba_spotdown.mp3",
+    cover: "images/Cover of La Bondad De Dios by Evan Craft, Elena Witt-Guerra.jpg",
+  },
+    {
+    title: "Correré a Ti", //12
     artist: "Funky/Marcela Gandara",
     src: "songs/SpotiDownloader.com - Correré a Ti - Funky.mp3",
     cover: "images/Cover of Correré a Ti by Funky, Marcela Gandara.jpg",
     hex: "#9D0716",
     barColor: "#ff4a09",
   },
-  {
-    title: "Cristo Es Necesario",
-    artist: "Danny Gokey/Christine D'Clario",
-    src: "songs/SpotiDownloader.com - Cristo Es Necesario - Danny Gokey.mp3",
-    cover: "images/Cover of Cristo Es Necesario by Danny Gokey, Christine D'Clario.jpg",
-    hex: "#864776",
-    barColor: "#747374",
+    {
+    title: "Gracias/Tu Fidelidad", //13
+    artist: "Marcos Witt, Un Corazón",
+    src: "songs/SpotiDownloader.com - Gracias - Marcos Witt, Un Corazon.mp3",
+    cover: "images/Cover of Gracias _ Tu Fidelidad by Marcos Witt, Un Corazón.jpg",
+    video: "videos/MarcosWitt1.mp4",
   },
-  {
-    title: "Cada mañana",
-    artist: "Sarai Rivera",
-    src: "songs/SpotiDownloader.com - Cada mañana - Sarai Rivera.mp3",
-    cover: "images/Cover of Cada mañana by Sarai Rivera.jpg",
-    hex: "#676664",
-    barColor: "#255d26", 
+    {
+    title: "Hay una Ciudad", //14
+    artist: "Los Hermanos Reyes",
+    src: "songs/Hay una ciudad.mp3",
+    cover: "images/Hay una ciudad.png",
+    hex: "#b09539ff",
+    barColor: "#e0ac02ff"
   },
-  {
-    title: "Espiritu Santo",
+    {
+    title: "Amado Mío", //15
+    artist: "Anita Morán",
+    src: "songs/Amado mio.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "La Perdida Oveja", //16
+    artist: "Los Voceros de Cristo/Leonel Tuchez",
+    src: "songs/La perdida oveja.mp3",
+    cover: "images/a5.png",
+    hex: "#3A3436",
+    barColor: "#726065ff"
+  },
+    {
+    title: "Si el Mundo en Vez de Rosas", //17
+    artist: "Los Voceros de Cristo",
+    src: "songs/Si el Mundo en Vez de Rosas_spotdown.org.mp3",
+    cover: "images/Cover of Si el Mundo en Vez de Rosas by Los Voceros de Cristo.jpg",
+  },
+    {
+    title: "Todo el Mundo Busca", //18
+    artist: "Wilson Camey",
+    src: "songs/Todo el Mundo Busca - Wilson Camey.mp3",
+    cover: "images/wc.png",
+  },
+    {
+    title: "Jesús Mi Fiel Amigo (En Vivo)", //19
+    artist: "Abel Zavala",
+    src: "songs/SpotiDownloader.com - Jesús Mi Fiel Amigo (En Vivo) - Abel Zavala.mp3",
+    cover: "images/Cover of Jesús Mi Fiel Amigo (En Vivo) by Abel Zavala.jpg",
+  },
+    {
+    title: "Esto Es Confiar", //20
+    artist: "Anita Morán",
+    src: "songs/Esto Es Confiar - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "Precioso Regalo ft Voceros", //21
+    artist: "Zulmy Mejia, Los Voceros de Cristo",
+    src: "songs/Precioso Regalo_spotdown.org.mp3",
+    cover: "images/Cover of Precioso Regalo by Zulmy Mejia, Los Voceros de Cristo.jpg",
+  },
+    {
+    title: "La Biblia", //22
+    artist: "Agustin Amador",
+    src: "songs/La Biblia.mp3",
+    cover: "images/Cover of Incontable Maravilla by Agustin Amador.jpg",
+  },
+    {
+    title: "Madre Solo Una", //23
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Madre Solo Una - Agustin Amador.mp3",
+    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
+  },
+    {
+    title: "Lámpara Es, La Biblia", //24
+    artist: "Manuel Bonilla",
+    src: "songs/Manuel Bonilla - Lámpara Es, La Biblia (Álbum Un Cántico Nuevo).mp3",
+    cover: "images/Cover of Lámpara Es _ La Biblia by Manuel Bonilla.jpg",
+  },
+    {
+    title: "Escogido Fui de Dios (2024)", //25
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Escogido Fui de Dios - En Vivo Desde El Salvador - Los Voceros de Cristo.mp3",
+    cover: "images/Cover of Loor A Ti Mi Dios - En Vivo Desde El Salvador by Los Voceros de Cristo.jpg",
+    hex: "#609FB6",
+    barColor: "#25b4e8ff"
+  },
+    {
+    title: "Asi Es Tu Amor", //26
+    artist: "Vaes",
+    src: "songs/SpotiDownloader.com - Asi Es Tu Amor - Vaes.mp3",
+    cover: "images/Cover of Asi Es Tu Amor by Vaes.jpg",
+    hex: "#B05010",
+    barColor: "#d18552",
+    video: "videos/Vaes4.mp4",
+  },
+    {
+    title: "Tren de la Vida", //27
+    artist: "Katty Mazariegos",
+    src: "songs/SpotiDownloader.com - Tren de la Vida - Katty Mazariegos.mp3",
+    cover: "images/Cover of Tren de la Vida by Katty Mazariegos.jpg",
+  },
+    {
+    title: "Los Frutos del Espíritu", //28
+    artist: "Marilú Orantes",
+    src: "songs/💖Los Frutos del Espíritu 🕊️ Música Cristiana Para Niños 🪴 Marilú Y Los Niños_320p.mp3",
+    cover: "images/Cover of Los Frutos del Espíritu by Marilú Orantes.jpg",
+    hex: "#1EA4C4",
+    barColor: "#42ff61",
+  },
+    {
+    title: "En Paz", //29
+    artist: "Daniel Calveti",
+    src: "songs/a1.mp3",
+    cover: "images/a1.png",
+    hex: "#616060ff",
+    barColor: "#a3a3a3"
+  },
+    {
+    title: "Debo Correr", //30
+    artist: "Óscar Medina",
+    src: "songs/Debo Correr.mp3",
+    cover: "images/Cover of Debo Correr by Óscar Medina.jpg",
+  },
+    {
+    title: "Nos Veremos en la Gloria", //31
+    artist: "Anita Morán",
+    src: "songs/NOS VEREMOS EN LA GLORIA - Anita Morán (VIDEO OFICIAL) - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "El Señor Es Mi Rey (feat. Tony Perez)", //32
+    artist: "Miel San Marcos, Tony Pérez",
+    src: "songs/El Señor Es Mi Rey (feat. Tony Perez)_spotdown.org.mp3",
+    cover: "images/Cover of El Señor Es Mi Rey (feat. Tony Perez) by Miel San Marcos, Tony Pérez.jpg",
+  },
+    {
+    title: "Dame Dame Dame", //33
+    artist: "Marilú Orantes",
+    src: "songs/Dame Dame Dame_320p.mp3",
+    cover: "images/Screenshot 2026-03-18 2.22.39 PM.png",
+    hex: "#D01038",
+    barColor: "#ff89eb",
+  },
+    {
+    title: "Apocalipsis 15:3", //34
+    artist: "Los Voceros de Cristo/Armando Trujillo",
+    src : "songs/SpotiDownloader.com - Apocalipsis 15_3 - Los Voceros de Cristo.mp3",
+    cover: "images/su amor.jpg",
+  },
+    {
+    title: "Hoy Soy Feliz", //35
+    artist: "Francisco Orantes, Veronica Leal",
+    src: "songs/Hoy Soy Feliz  Francisco Orantes.mp3",
+    cover: "images/Screenshot 2026-08-28 11.39.46 PM.png",
+  },
+    {
+    title: "Día Alegre", //36
+    artist: "Anita Morán",
+    src: "songs/Dia alegre.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Como Una Flor - (EN VIVO)", //37
+    artist: "Wilson Camey/Los Hermanos Reyes",
+    src: "songs/Como Una Flor - En vivo - Wilson Camey.mp3",
+    cover: "images/wilson.png",
+    hex: "#2F5F87",
+    barColor: "#0057c0ff"
+  },
+    {
+    title: "Soy Peregrino", //38
+    artist: "Anita Morán",
+    src: "songs/Soy Peregrino - Anita Morán (Video Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+    {
+    title: "Que Sucederá", //39
+    artist: "Anita Morán",
+    src: "songs/06 Track 6.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "La Bondad De Dios", //40
+    artist: "Evan Craft, Elena Witt-Guerra",
+    src: "songs/SpotiDownloader.com - La Bondad De Dios - Evan Craft.mp3",
+    cover: "images/Cover of La Bondad De Dios by Evan Craft, Elena Witt-Guerra.jpg",
+  },
+    {
+    title: "Ahora Soy Feliz", //41
+    artist: "Los Hermanos Reyes",
+    src: "songs/song1.mp3",
+    cover: "images/song1.jpg",
+  },
+    {
+    title: "Reborn", //42
+    artist: "Evan Craft, Redimi2",
+    src: "songs/SpotiDownloader.com - Reborn - Evan Craft.mp3",
+    cover: "images/evan.png",
+    lrc: "LRC files/Reborn - Evan Craft, Redimi2.lrc",
+  },
+    {
+    title: "Jesús Mi Fiel Amigo - Sesión Orgánica", //43
+    artist: "Abel Zavala",
+    src: "songs/Jesús Mi Fiel Amigo - Sesión Orgánica_spotdown.org.mp3",
+    cover: "images/Cover of Jesús Mi Fiel Amigo - Sesión Orgánica by Abel Zavala.jpg",
+  },
+    {
+    title: "El Alfarero", //44
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - El Alfarero (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "Edifiquemos", //45
     artist: "Zulmy Mejia",
-    src: "songs/SpotiDownloader.com - Espiritu Santo - Zulmy Mejia.mp3",
+    src: "songs/SpotiDownloader.com - Edifiquemos - Zulmy Mejia.mp3",
     cover: "images/zulmy.jpg",
   },
-  {
-    title: "Sumérgeme", //175
-    artist: "Jesús Adrián Romero",
-    src: "songs/SpotiDownloader.com - Sumérgeme - Jesús Adrián Romero.mp3",
-    cover: "images/Cover of Sumérgeme by Jesús Adrián Romero.jpg",
+    {
+    title: "Ven, Te Necesito", //46
+    artist: "Lilly Goodman, Jesús Adrián Romero",
+    src: "songs/Ven, Te Necesito_spotdown.org.mp3",
+    cover: "images/Screenshot 2026-07-18 2.32.22 PM.png",
+    video: "videos/Romero1.mp4"
   },
-  {
-    title: "Tu Palabra",
+    {
+    title: "Tu Palabra", //47
     artist: "Marcela Gandara",
     src: "songs/SpotiDownloader.com - Tu Palabra - Marcela Gandara.mp3",
     cover: "images/song7.png",
   },
-  {
-    title: "Creo En Ti",
-    artist: "Julio Melgar",
-    src: "songs/SpotiDownloader.com - Creo En Ti - Julio Melgar.mp3",
-    cover: "images/Cover of Creo En Ti by Julio Melgar.jpg",
+    {
+    title: "mi DIOS", //48
+    artist: "Madiel Lara",
+    src: "songs/SpotiDownloader.com - mi DIOS - Madiel Lara.mp3",
+    cover: "images/Cover of mi DIOS by Madiel Lara.jpg",
+    lrc: "LRC files/mi DIOS - Madiel Lara.lrc",
   },
-  {
-    title: "Levanto Mis Manos",
-    artist: "Samuel Hernández",
-    src: "songs/SpotiDownloader.com - Levanto Mis Manos - Samuel Hernández.mp3",
-    cover: "images/Cover of Levanto Mis Manos by Samuel Hernández.jpg",
+    {
+    title: "Herencia en el Cielo", //49
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Herencia en el Cielo - Agustin Amador.mp3",
+    cover: "images/Cover of Herencia en el Cielo by Agustin Amador.jpg",
+    hex: "#3087D0",
+    barColor: "#6ab7f7",
   },
-  {
-    title: "No Hay Nadie Como Cristo", //179
-    artist: "Marilú Orantes",
-    src: "songs/SpotiDownloader.com - No Hay Nadie Como Cristo - Marilú Orantes.mp3",
-    cover: "images/Cover of No Hay Nadie Como Cristo by Marilú Orantes.jpg",
-    hex: "#CA3DE9",
-    barColor: "#ff2121",
-  }, // #773830 && #8A8185
-  {
-    title: "Mi triunfo con Jesús", //180
+    {
+    title: "Nicodemo", //50
+    artist: "Leonel Tuchez",
+    src: "songs/Nicodemo.mp3",
+    cover: "images/Esperando.jpg",
+    hex: "#854b6fff",
+    barColor: "#be408eff"
+  },
+    {
+    title: "Cuando Se Pase Lista", //51
+    artist: "Anita Morán",
+    src: "songs/Cuando se pase lista.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Hay un Dios", //52
+    artist: "Los Hermanos Reyes",
+    src: "songs/Hay un Dios.mp3",
+    cover: "images/Hay un Dios.png",
+    hex: "#0b2f43ff",
+    barColor: "#005f92ff"
+  },
+    {
+    title: "Ama al Señor", //53
+    artist: "Anita Morán",
+    src: "songs/Ama al Senor.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Mi triunfo con Jesús", //54
     artist: "Los Voceros de Cristo",
     src: "songs/SpotiDownloader.com - Mi triunfo con Jesús - Los Voceros de Cristo.mp3",
     cover: "images/a5.png",
     hex: "#3A3436",
     barColor: "#726065ff"
   },
-  {
-    title: "Hay una Ciudad",
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Hay una ciudad - Los Voceros de Cristo.mp3",
-    cover: "images/new3.png",
-    hex: "#582820",
-    barColor: "#941b06ff"
+    {
+    title: "Venciendo con Jesús", //55
+    artist: "Anita Morán",
+    src: "songs/Venciendo con Jesus.mp3",
+    cover: "images/Eres Libre Album.jpg",
   },
-  {
-    title: "Cuando hablas tú",
+    {
+    title: "Loor A Ti Mi Dios (2024)", //56
     artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Cuando hablas tú - Los Voceros de Cristo.mp3",
-    cover: "images/Loor.jpg",
-    hex: "#783800",
-    barColor: "#bf5900ff"
+    src: "songs/SpotiDownloader.com - Loor A Ti Mi Dios - En Vivo Desde El Salvador - Los Voceros de Cristo.mp3",
+    cover: "images/Cover of Loor A Ti Mi Dios - En Vivo Desde El Salvador by Los Voceros de Cristo.jpg",
+    hex: "#609FB6",
+    barColor: "#31b6e7ff"
   },
-  {
-    title: "Sinónimo de Amar",
+    {
+    title: "He peleado la batalla", //57
+    artist: "Los Hermanos Reyes",
+    src: "songs/He peleado la batalla.mp3",
+    cover: "images/He peleado la batalla.png",
+    hex: "#787053ff",
+    barColor: "#967f2cff"
+  },
+    {
+    title: "No Temeré", //58
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - No Temeré (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "Recuerdo del Calvario", //59
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Recuerdo del Calvario (Video Letra) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+    {
+    title: "Mi cántaro vacío", //60
+    artist: "Los Voceros de Cristo",
+    src: "songs/cántaro.mp3",
+    cover: "images/a5.png",
+    hex: "#3A3436",
+    barColor: "#726065ff"
+  },
+    {
+    title: "Ahora Cristiano Soy", //61
+    artist: "Ezequiel Williams",
+    src: "songs/SpotiDownloader.com - Ahora Cristiano Soy - Ezequiel Williams.mp3",
+    cover: "images/Cover of Hoy Te Pido Señor by Ezequiel Williams.jpg",
+  },
+    {
+    title: "A Tu Lado en el Cielo", //62
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - A Tu Lado en el Cielo - Los Voceros de Cristo.mp3",
+    cover: "images/Alvaro.jpg",
+    video: "videos/Voceros1.mp4"
+  },
+    {
+    title: "Incontable Maravilla", //63
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Incontable Maravilla - Agustin Amador.mp3",
+    cover: "images/Cover of Incontable Maravilla by Agustin Amador.jpg",
+    hex: "#1F678F",
+    barColor: "#69b9e4",
+  },
+    {
+    title: "Matrimonio Feliz", //64
+    artist: "Anita Morán",
+    src: "songs/Matrimonio Feliz - Anita Moran - PLAYLIST CRISTIANA.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+    {
+    title: "La Biblia dice que el hombre", //65
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - La Biblia dice que el hombre - Los Voceros de Cristo.mp3",
+    cover: "images/Cover of La Biblia dice que el hombre by Los Voceros de Cristo.jpg",
+    hex: "#9D8627",
+    barColor: "#c39c00ff"
+  },
+    {
+    title: "Cuando Muera Yo Ft. Los Hermanos Reyes", //66
+    artist: "Los Voceros de Cristo, Los Hermanos Reyes",
+    src: "songs/Cuando Muera Yo.mp3",
+    cover: "images/Cuando Muera Yo.png",
+    video: "videos/Voceros2.mp4",
+  },
+    {
+    title: "Tu Promesa", //67
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Tu Promesa (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "Yo Tengo Fe", //68
+    artist: "Zulmy Mejia",
+    src: "songs/SpotiDownloader.com - Yo Tengo Fe - Zulmy Mejia.mp3",
+    cover: "images/Cover of Yo Tengo Fe by Zulmy Mejia.jpg",
+  },
+    {
+    title: "Ama A Dios Y A Tu Vecino", //69
+    artist: "Danny Gokey, Evan Craft, Redimi2",
+    src: "songs/SpotiDownloader.com - Ama A Dios Y A Tu Vecino - Danny Gokey.mp3",
+    cover: "images/Cover of Ama A Dios Y A Tu Vecino by Danny Gokey, Evan Craft, Redimi2.jpg",
+    hex: "#403038",
+    barColor: "#ffc863",
+  },
+    {
+    title: "Perdón", //70
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - Perdón (Video Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+    {
+    title: "La Cumbia del Perdón", //71
+    artist: "Vaes, Musiko",
+    src: "songs/SpotiDownloader.com - La Cumbia del Perdón - Vaes.mp3",
+    cover: "images/Cover of La Cumbia del Perdón by Vaes, Musiko.jpg",
+    video: "videos/Vaes6.mp4"
+  },
+    {
+    title: "Oh Alma Mía (2002)", //72
+    artist: "Los Voceros de Cristo",
+    src: "songs/a5.mp3",
+    cover: "images/a5.png",
+  },
+    {
+    title: "Sinónimo de Amar", //73
     artist: "Los Voceros de Cristo",
     src: "songs/SpotiDownloader.com - Sinónimo de Amar - Los Voceros de Cristo.mp3",
     cover: "images/new3.png",
     hex: "#582820",
     barColor: "#941b06ff"
   },
-  {
-    title: "Triunfante hasta el final",//185
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Triunfante hasta el final - Los Voceros de Cristo.mp3",
-    cover: "images/song11.png",
-    hex: "#91190A",
-    barColor: "#d11800ff"
+    {
+    title: "Bendeciré a Jehová", //74
+    artist: "Anita Morán",
+    src: "songs/Bendeciré a Jehová_spotdown.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
   },
-  {
-    title: "Ama A Dios Y A Tu Vecino",//187
-    artist: "Danny Gokey, Evan Craft, Redimi2",
-    src: "songs/SpotiDownloader.com - Ama A Dios Y A Tu Vecino - Danny Gokey.mp3",
-    cover: "images/Cover of Ama A Dios Y A Tu Vecino by Danny Gokey, Evan Craft, Redimi2.jpg",
-    hex: "#403038",
-    barColor: "#ffc863",
-  }, 
-  {
-    title: "DIOS HA SIDO BUENO",
+    {
+    title: "La Biblia", //75
+    artist: "Manuel Bonilla",
+    src: "songs/song2.mp3",
+    cover: "images/song2.jpg",
+    hex: "#942409",
+    barColor: "#df2d00ff"
+  },
+    {
+    title: "NECESITO TU PRESENCIA", //76
+    artist: "Anita Morán",
+    src: "songs/NECESITO TU PRESENCIA- ANITA MORÁN (OFICIAL9 - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+    {
+    title: "Dulce Historia", //77
+    artist: "Anita Morán",
+    src: "songs/Dulce Historia.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "Espíritu De Dios", //78
+    artist: "Leonel Tuchez",
+    src: "songs/SpotiDownloader.com - Espíritu De Dios - Leonel Tuchez.mp3",
+    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg"
+  },
+    {
+    title: "Su amor siempre es su amor", //79
+    artist: "Los Voceros de Cristo/Ruth E. Gomez",
+    src: "songs/su amor.mp3",
+    cover: "images/su amor.jpg",
+    hex: "#313831",
+    barColor: "#527052ff"
+  },
+    {
+    title: "Alto Precio - (EN VIVO)", //80
+    artist: "Wilson Camey/Los Hermanos Reyes",
+    src: "songs/Alto Precio - En vivo - Wilson Camey.mp3",
+    cover: "images/wilson.png",
+    hex: "#2F5F87",
+    barColor: "#0057c0ff"
+  },
+    {
+    title: "Tengo Un Dios - Julio Elías", //81
+    artist: "Julio Elias",
+    src: "songs/Tengo Un Dios - Julio Elías.mp3",
+    cover: "images/cover1.jpg",
+  },
+    {
+    title: "Quien me podrá separar", //82
+    artist: "Los Hermanos Reyes",
+    src: "songs/a3.mp3",
+    cover: "images/a3.png",
+    hex: "#17494eff",
+    barColor: "#01747eff"
+  },
+    {
+    title: "Hoy Te Pido Señor", //83
+    artist: "Ezequiel Williams",
+    src: "songs/SpotiDownloader.com - Hoy Te Pido Señor - Ezequiel Williams.mp3",
+    cover: "images/Cover of Hoy Te Pido Señor by Ezequiel Williams.jpg",
+  },
+    {
+    title: "Te Necesito Dios", //84
+    artist: "Anita Morán",
+    src: "songs/Te necesito Dios.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Solo a Dios", //85
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Solo a Dios - Agustin Amador.mp3",
+    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
+    hex: "#456426",
+    barColor: "#a6dc71",
+  },
+    {
+    title: "DIOS HA SIDO BUENO", //86
     artist: "Madiel Lara",
     src: "songs/SpotiDownloader.com - DIOS HA SIDO BUENO - Madiel Lara.mp3",
     cover: "images/Cover of DIOS HA SIDO BUENO by Madiel Lara.jpg",
@@ -1369,528 +592,809 @@ const playlist = [
     barColor: "#e88930dd",
     video: "videos/MadielLara3.mp4",
     lrc: "LRC files/DIOS HA SIDO BUENO - Madiel Lara.lrc",
-  }, 
-  {
-    title: "ABBA PADRE",//205
-    artist: "Madiel Lara",
-    src: "songs/SpotiDownloader.com - ABBA PADRE - Madiel Lara.mp3",
-    cover: "images/Cover of INFINITO by Madiel Lara.jpg",
-    video: "videos/MadielLara7.mp4",
   },
-  {
-    title: "Dame Dame Dame",
-    artist: "Marilú Orantes",
-    src: "songs/Dame Dame Dame_320p.mp3",
-    cover: "images/Screenshot 2026-03-18 2.22.39 PM.png",
-    hex: "#D01038",
-    barColor: "#ff89eb",
-  }, 
-  {
-    title: "Los Frutos del Espíritu",
-    artist: "Marilú Orantes",
-    src: "songs/💖Los Frutos del Espíritu 🕊️ Música Cristiana Para Niños 🪴 Marilú Y Los Niños_320p.mp3",
-    cover: "images/Cover of Los Frutos del Espíritu by Marilú Orantes.jpg",
-    hex: "#1EA4C4",
-    barColor: "#42ff61",
-  }, 
-  {
-    title: "Aunque No Lo Crean",
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Aunque No Lo Crean - Agustín Amador.mp3",
-    cover: "images/Cover of Aunque No Lo Crean by Agustín Amador.jpg",
-    hex: "#5857A7",
-    barColor: "#aba9f7",
-  }, 
-  {
-    title: "Con Cristo Me Basta",
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Con Cristo Me Basta - Agustin Amador.mp3",
-    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
-    hex: "#456426",
-    barColor: "#a6dc71",
-  }, 
-  {
-    title: "Incontable Maravilla",
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Incontable Maravilla - Agustin Amador.mp3",
-    cover: "images/Cover of Incontable Maravilla by Agustin Amador.jpg",
-    hex: "#1F678F",
-    barColor: "#69b9e4",
-  }, 
-  {
-    title: "La Bonanza", //229
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - La Bonanza - Agustin Amador.mp3",
-    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
-    hex: "#456426",
-    barColor: "#a6dc71",
-  },  
-  {
-    title: "Primero Dios, Vol. 5", //230
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Primero Dios, Vol. 5 - Agustin Amador.mp3",
-    cover: "images/Cover of Primero Dios, Vol. 5 by Agustin Amador.jpg",
-    hex: "#B99241",
-    barColor: "#e2bd71",
-  },  
-  {
-    title: "Herencia en el Cielo",
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Herencia en el Cielo - Agustin Amador.mp3",
-    cover: "images/Cover of Herencia en el Cielo by Agustin Amador.jpg",
-    hex: "#3087D0",
-    barColor: "#6ab7f7",
-  },  
-  {
-    title: "No Vayas a Olvidar",
+    {
+    title: "Buscale", //87
+    artist: "Óscar Medina",
+    src: "songs/Buscale.mp3",
+    cover: "images/Buscale.jpg",
+    hex: "#836531",
+    barColor: "#b56702ff"
+  },
+    {
+    title: "Jesús Sé Mi Guía", //88
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Jesús Sé Mi Guía - Los Voceros de Cristo.mp3",
+    cover: "images/Cover of La Biblia dice que el hombre by Los Voceros de Cristo.jpg",
+  },
+    {
+    title: "Esa Roca", //89
+    artist: "Anita Morán",
+    src: "songs/Anita Morán Esa Roca - Briseida López.mp3",
+    cover: "images/Cover of Esa Roca by Anita Morán.jpg",
+  },
+    {
+    title: "No Vayas a Olvidar", //90
     artist: "Agustin Amador",
     src: "songs/SpotiDownloader.com - No Vayas a Olvidar - Agustin Amador.mp3",
     cover: "images/Cover of No Vayas a Olvidar by Agustin Amador.jpg",
     hex: "#989898",
     barColor: "#b8c0c6",
-  },  
-  {
-    title: "Mi Pensamiento",
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Mi Pensamiento - Agustin Amador.mp3",
-    cover: "images/Cover of Mi Pensamiento by Agustin Amador.jpg",
-    hex: "#7F000F",
-    barColor: "#af1a2b",
   },
-  {
-    title: "Todo Pasa",
+    {
+    title: "La Bonanza", //91
     artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Toda Pasa - Agustin Amador.mp3",
-    cover: "images/Cover of Incontable Maravilla by Agustin Amador.jpg",
-  }, 
-  {
-    title: "Pródigo",
-    artist: "Un Corazón, Louie Abrego",
-    src: "songs/Pródigo.mp3",
+    src: "songs/SpotiDownloader.com - La Bonanza - Agustin Amador.mp3",
+    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
+    hex: "#456426",
+    barColor: "#a6dc71",
+  },
+    {
+    title: "Siempre Me Encuentras (You Find Me)", //92
+    artist: "Evan Craft",
+    src: "songs/SpotiDownloader.com - Siempre Me Encuentras (You Find Me) - Evan Craft.mp3",
+    cover: "images/evan.png",
+    lrc: "LRC files/Siempre Me Encuentras (You Find Me) - Evan Craft.lrc"
+  },
+    {
+    title: "Jesús es mi Refugio", //93
+    artist: "Los Voceros de Cristo",
+    src: "songs/Refugio.mp3",
+    cover: "images/new3.png",
+    hex: "#582820",
+    barColor: "#941b06ff"
+  },
+    {
+    title: "Contento Estoy", //94
+    artist: "Los Hermanos Reyes",
+    src: "songs/Contento Estoy.mp3",
+    cover: "images/song27.png",
+    hex: "#383838",
+    barColor: "#676536ff"
+  },
+    {
+    title: "Deuda", //95
+    artist: "Katty Mazariegos",
+    src: "songs/SpotiDownloader.com - Deuda - Katty Mazariegos.mp3",
+    cover: "images/Cover of Deuda by Katty Mazariegos.jpg",
+  },
+    {
+    title: "Jesús Es Mi Rey Soberano", //96
+    artist: "Leonel Tuchez",
+    src: "songs/Jesús Es Mi Rey Soberano.mp3",
+    cover: "images/Esperando.jpg",
+  },
+    {
+    title: "Feliz Cumpleaños", //97
+    artist: "Biper Y Sus Amigos",
+    src: "songs/SpotiDownloader.com - Feliz Cumple - Biper Y Sus Amigos.mp3",
+    cover: "images/Cover of Feliz Cumple by Biper Y Sus Amigos.jpg",
+  },
+    {
+    title: "Encontrarte", //98
+    artist: "Majo y Dan, Madiel Lara",
+    src: "songs/SpotiDownloader.com - Encontrarte - Majo y Dan.mp3",
+    cover: "images/Cover of Encontrarte by Majo y Dan, Madiel Lara.jpg",
+    video: "videos/majoYDan3.mp4",
+    lrc: "LRC files/Encontrarte - Majo y Dan, Madiel Lara.lrc",
+  },
+    {
+    title: "Enciende Una Luz", //99
+    artist: "Marcos Witt, Un Corazón, Sarai Rivera, Elena Witt-Guerra, Krystal Guerra Witt, TAYA, Montesanto, Miel San Marcos, Waleska Morales, ECCOS, Indiomar",
+    src: "songs/SpotiDownloader.com - Enciende Una Luz - Marcos Witt.mp3",
+    cover: "images/Cover of Enciende Una Luz by Marcos Witt, Un Corazón, Sarai Rivera, Elena Witt-Guerra, Krystal Guerra Witt, TAYA, Montesanto, Miel San Marcos, Waleska Morales, ECCOS, Indiomar.jpg",
+    video: "videos/MarcosWitt2.mp4"
+  },
+    {
+    title: "Con Mis Manos Levantadas", //100
+    artist: "Danilo Montero",
+    src: "songs/SpotiDownloader.com - Con Mis Manos Levantadas - Danilo Montero.mp3",
+    cover: "images/Cover of Con Mis Manos Levantadas by Danilo Montero.jpg",
+  },
+    {
+    title: "Cruzando Por El Mundo", //101
+    artist: "Anita Morán",
+    src: "songs/05 Track 5.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "Loor a ti mi Dios v2", //102
+    artist: "Los Voceros de Cristo",
+    src: "songs/Loor2.mp3",
+    cover: "images/a5.png",
+    hex: "#3A3436",
+    barColor: "#726065ff"
+  },
+    {
+    title: "Primero Dios, Vol. 5", //103
+    artist: "Agustin Amador",
+    src: "songs/Primero Dios, Vol. 5.mp3",
+    cover: "images/cover3.jpg",
+  },
+    {
+    title: "Resucitó", //104
+    artist: "Anita Morán",
+    src: "songs/Resucitó - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "Más Que Vencedor", //105
+    artist: "Danilo Montero",
+    src: "songs/SpotiDownloader.com - Más Que Vencedor - Danilo Montero.mp3",
+    cover: "images/Cambiado.jpg",
+  },
+    {
+    title: "Escucharte Hablar / Dios Ha Sido Bueno", //106
+    artist: "Marcos Witt/Indiomar/Dariana",
+    src: "songs/SpotiDownloader.com - Escucharte Hablar _ Dios Ha Sido Bueno - Marcos Witt.mp3",
+    cover: "images/Cover of Escucharte Hablar _ Dios Ha Sido Bueno by Marcos Witt, Indiomar, Dariana (1).jpg",
+  },
+    {
+    title: "Que Contento Estoy - (EN VIVO)", //107
+    artist: "Wilson Camey/Los Hermanos Reyes",
+    src: "songs/Que Contento Estoy - En vivo - Wilson Camey.mp3",
+    cover: "images/wilson.png",
+    hex: "#2F5F87",
+    barColor: "#0057c0ff"
+  },
+    {
+    title: "La Historia Del Violín", //108
+    artist: "Leonel Tuchez",
+    src: "songs/Leonel Tuchez - La Historia Del Violín (SPOTISAVER).mp3",
+    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg"
+  },
+    {
+    title: "Dios De Imposibles", //109
+    artist: "Un Corazón, Louie Abrego, Kim Richards",
+    src: "songs/SpotiDownloader.com - Dios De Imposibles - Un Corazón.mp3",
     cover: "images/Cover of Pródigo by Un Corazón, Louie Abrego.jpg",
-    hex: "#62A2AB",
-    barColor: "#9ec3c8",
-    video: "videos/UnCorazon2.mp4",
-  }, 
-  {
-    title: "HAY UN DIOS - REMIX",
-    artist: "Seeiji, Vaes",
-    src: "songs/SpotiDownloader.com - HAY UN DIOS - REMIX - Seeiji.mp3",
-    cover: "images/Cover of HAY UN DIOS - REMIX by Seeiji, Vaes.jpg",
-    hex: "#F76800",
-    barColor: "#ffaa6d",
-    video: "videos/Seeji1.mp4",
-  }, 
-  {
-    title: "Serendipia", //240
+  },
+    {
+    title: "Que Bueno es El Señor", //110
+    artist: "Los Hermanos Reyes",
+    src: "songs/Que Bueno es El Señor.mp3",
+    cover: "images/Que Bueno es El Señor.png",
+    hex: "#6f2d5cff",
+    barColor: "#950e71ff"
+  },
+    {
+    title: "Hay una Ciudad", //111
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Hay una ciudad - Los Voceros de Cristo.mp3",
+    cover: "images/new3.png",
+    hex: "#582820",
+    barColor: "#941b06ff"
+  },
+    {
+    title: "Soy Feliz", //112
+    artist: "Los Hermanos Reyes",
+    src: "songs/Soy feliz.mp3",
+    cover: "images/He peleado la batalla.png",
+    hex: "#787053ff",
+    barColor: "#ac943fff"
+  },
+    {
+    title: "Estoy TRANQUILO", //113
+    artist: "Madiel Lara",
+    src: "songs/SpotiDownloader.com - Estoy TRANQUILO - Madiel Lara.mp3",
+    cover: "images/Cover of Otra Vez by Madiel Lara.jpg",
+    video: "videos/MadielLara8.mp4"
+  },
+    {
+    title: "Tu Fidelidad", //114
+    artist: "Marcos Witt/Alex Campos",
+    src: "songs/a6.mp3",
+    cover: "images/a6.png",
+  },
+    {
+    title: "Tu el Alfarero", //115
+    artist: "Ezequiel Williams",
+    src: "songs/SpotiDownloader.com - Tu el Alfarero - Ezequiel Williams.mp3",
+    cover: "images/Cover of Tu el Alfarero by Ezequiel Williams.jpg",
+  },
+    {
+    title: "El Día Qué Llegaste", //116
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - El Día Qué Llegaste (SPOTISAVER).mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "Sumérgeme", //117
+    artist: "Jesús Adrián Romero",
+    src: "songs/SpotiDownloader.com - Sumérgeme - Jesús Adrián Romero.mp3",
+    cover: "images/Cover of Sumérgeme by Jesús Adrián Romero.jpg",
+  },
+    {
+    title: "Cuando Te Conocí", //118
+    artist: "Anita Morán",
+    src: "songs/Cuando Te Conoci.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "Me Dicen Que Me Aman", //119
+    artist: "Jesús Adrián Romero",
+    src: "songs/a4.mp3",
+    cover: "images/a4.png",
+  },
+    {
+    title: "Precioso Regalo", //120
+    artist: "Zulmy Mejia",
+    src: "songs/SpotiDownloader.com - Precioso Regalo - Zulmy Mejia.mp3",
+    cover: "images/zulmy.jpg",
+  },
+    {
+    title: "Confía En El Señor Ft Francisco Orantes", //121
+    artist: "Hermanos Osorio, Francisco Orantes",
+    src: "songs/Confía en el Señor - Hermanos Osorio.mp3",
+    cover: "images/orantes.png",
+  },
+    {
+    title: "Escogido Fui de Dios (2025)", //122
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Escogido fui de Dios (Nuevos Horizontes) - Los Voceros de Cristo.mp3",
+    cover: "images/Cover of Escogido fui de Dios (Nuevos Horizontes) by Los Voceros de Cristo.jpg",
+    hex: "#8F2727",
+    barColor: "#130069ff"
+  },
+    {
+    title: "Eran 100 Ovejas (Visión Pastoral)", //123
+    artist: "Francisco Orantes, Paulino Bernal",
+    src: "songs/Eran 100 Ovejas (Visión Pastoral) Francisco Orantes ft Paulino Bernal.mp3",
+    cover: "images/Screenshot 2026-08-28 11.39.46 PM.png",
+  },
+    {
+    title: "En Mi Casa Vive Jesús", //124
+    artist: "Francisco Orantes/Marilú Orantes",
+    src: "songs/SpotiDownloader.com - En Mi Casa Vive Jesús - Francisco Orantes.mp3",
+    cover: "images/Cover of En Mi Casa Vive Jesús by Francisco Orantes.jpg",
+    hex: "#628ABF",
+    barColor: "#3287f5ff"
+  },
+    {
+    title: "Desde Que Te Conocí", //125
+    artist: "Anita Morán",
+    src: "songs/Desde que te conoci.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Limpia Mi Vida", //126
+    artist: "Anita Morán",
+    src: "songs/09 Track 9.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "La Puerta es Cristo", //127
+    artist: "Anita Morán",
+    src: "songs/La puerta es Cristo.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "A donde Iré", //128
+    artist: "Anita Morán",
+    src: "songs/10 Track 10.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "Renuévame", //129
+    artist: "Marcos Witt",
+    src: "songs/a2.mp3",
+    cover: "images/a2.png",
+    hex: "#0E434A",
+    barColor: "#006c7bff"
+  },
+    {
+    title: "Que lindo es mi Cristo", //130
+    artist: "Wilson Camey, Los Hermanos Reyes",
+    src: "songs/Que lindo es mi Cristo.mp3",
+    cover: "images/Que lindo es mi Cristo.png",
+  },
+    {
+    title: "Agradecimiento", //131
+    artist: "Manuel Bonilla",
+    src: "songs/Agradecimiento - Manuel Bonilla.mp3",
+    cover: "images/manuel.png",
+  },
+    {
+    title: "Levanto Mis Manos", //132
+    artist: "Samuel Hernández",
+    src: "songs/SpotiDownloader.com - Levanto Mis Manos - Samuel Hernández.mp3",
+    cover: "images/Cover of Levanto Mis Manos by Samuel Hernández.jpg",
+  },
+    {
+    title: "Como Una Flor Ft. Los Hermanos Reyes", //133
+    artist: "Hermanos Osorio, Los Hermanos Reyes",
+    src: "songs/Como Una Flor (Versión Los Hermanos Reyes).mp3",
+    cover: "images/Como Una Flor (Versión Los Hermanos Reyes).png",
+  },
+    {
+    title: "Triunfante hasta el final", //134
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Triunfante hasta el final - Los Voceros de Cristo.mp3",
+    cover: "images/song11.png",
+    hex: "#91190A",
+    barColor: "#d11800ff"
+  },
+    {
+    title: "Gracias", //135
+    artist: "Marcos Witt",
+    src: "songs/Gracias.mp3",
+    cover: "images/a6.png",
+  },
+    {
+    title: "Por Herencia", //136
+    artist: "Francisco Orantes/Marilú Orantes",
+    src: "songs/Por Herencia.mp3",
+    cover: "images/Por Herencia.jpg",
+    hex: "#5a240cff",
+    barColor: "#992e00ff"
+  },
+    {
+    title: "Roca Eterna", //137
+    artist: "Anita Morán",
+    src: "songs/Roca Eterna.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "Ese Hombre - Si Tienes un Amor - Si el Mundo en Vez de Rosas - En Vivo", //138
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Ese Hombre - Si Tienes un Amor - Si el Mundo en Vez de Rosas - En Vivo - Los Voceros de Cristo.mp3",
+    cover: "images/su amor.jpg",
+  },
+    {
+    title: "Cada mañana", //139
+    artist: "Sarai Rivera",
+    src: "songs/SpotiDownloader.com - Cada mañana - Sarai Rivera.mp3",
+    cover: "images/Cover of Cada mañana by Sarai Rivera.jpg",
+    hex: "#676664",
+    barColor: "#255d26", 
+  },
+    {
+    title: "Es El Amor", //140
+    artist: "Duo Hermanos Devia",
+    src: "songs/SpotiDownloader.com - Es El Amor - Duo Hermanos Devia.mp3",
+    cover: "images/Cover of Es El Amor by Duo Hermanos Devia.jpg",
+  },
+    {
+    title: "Jesús", //141
+    artist: "Francisco Orantes",
+    src: "songs/Jesús.mp3",
+    cover: "images/Jesús.jpg",
+    hex: "#08186C",
+    barColor: "#001db0ff"
+  },
+    {
+    title: "Para Ti Mamá", //142
+    artist: "Anita Morán",
+    src: "songs/Para Ti Mama.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "Como una Flor", //143
+    artist: "Los Hermanos Reyes",
+    src: "songs/song19.mp3",
+    cover: "images/song19.png",
+    hex: "#383838",
+    barColor: "#676536ff"
+  },
+    {
+    title: "No os Afanéis", //144
+    artist: "Anita Morán",
+    src: "songs/No os afaneis.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Lucharé", //145
+    artist: "Anita Morán",
+    src: "songs/Luchare.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "Dulce Hogar", //146
+    artist: "Katty Mazariegos",
+    src: "songs/SpotiDownloader.com - Dulce Hogar - Katty Mazariegos.mp3",
+    cover: "images/Cover of Tren de la Vida by Katty Mazariegos.jpg",
+  },
+    {
+    title: "ABBA PADRE", //147
+    artist: "Madiel Lara",
+    src: "songs/SpotiDownloader.com - ABBA PADRE - Madiel Lara.mp3",
+    cover: "images/Cover of INFINITO by Madiel Lara.jpg",
+    video: "videos/MadielLara7.mp4",
+  },
+    {
+    title: "Casa Nueva", //148
+    artist: "Anita Morán",
+    src: "songs/03 Track 3.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "Herido Fue", //149
+    artist: "Anita Morán",
+    src: "songs/Herido Fue.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "Vivir Cantado", //150
+    artist: "Julio Elias",
+    src: "songs/Julio Elias.mp3",
+    cover: "images/Julio Elias.png",
+    hex: "#8c3d2fff",
+    barColor: "#a11901ff"
+  },
+    {
+    title: "Necesito De Ti", //151
+    artist: "Francisco Orantes",
+    src: "songs/Necesito De Ti.mp3",
+    cover: "images/song10.png",
+    hex: "#A16962",
+    barColor: "#b84e40ff"
+  },
+    {
+    title: "Te Necesito", //152
+    artist: "Los Hermanos Reyes",
+    src: "songs/Te necesito.mp3",
+    cover: "images/Hay una ciudad.png",
+    hex: "#bb9b31ff",
+    barColor: "#d3a50cff"
+  },
+    {
+    title: "Te Estoy Esperando", //153
+    artist: "Leonel Tuchez",
+    src: "songs/Esperando.mp3",
+    cover: "images/Esperando.jpg",
+    hex: "#854b6fff",
+    barColor: "#a90b6dff"
+  },
+    {
+    title: "Alto Precio", //154
+    artist: "Los Hermanos Reyes",
+    src: "songs/Alto Precio.mp3",
+    cover: "images/song27.png",
+    hex: "#383838",
+    barColor: "#676536ff"
+  },
+    {
+    title: "Pensaba En Ti", //155
+    artist: "Leonel Tuchez",
+    src: "songs/SpotiDownloader.com - Pensaba En Ti - Leonel Tuchez.mp3",
+    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
+  },
+    {
+    title: "Cuando hablas tú", //156
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Cuando hablas tú - Los Voceros de Cristo.mp3",
+    cover: "images/Loor.jpg",
+    hex: "#783800",
+    barColor: "#bf5900ff"
+  },
+    {
+    title: "Casa Nueva", //157
+    artist: "Leonel Tuchez",
+    src: "songs/Leonel Tuchez - Casa Nueva (SPOTISAVER).mp3",
+    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
+  },
+    {
+    title: "Razón de Vivir", //158
+    artist: "Anita Morán",
+    src: "songs/SpotiDownloader.com - Razón de Vivir - Anita Morán.mp3",
+    cover: "images/Screenshot 2026-05-16 12.04.27 PM.png",
+  },
+    {
+    title: "Serendipia", //159
     artist: "Vaes, Kike Pavón",
     src: "songs/SpotiDownloader.com - serendipia - Vaes.mp3",
     cover: "images/Cover of serendipia by Vaes, Kike Pavón.jpg",
     hex: "#BF4737",
     barColor: "#f38b7d",
     video: "videos/Vaes1.mp4",
-  }, 
-  {
-    title: "El Señor es mi pastor",
-    artist: "Danilo Montero",
-    src: "songs/SpotiDownloader.com - El Señor es mi pastor - Danilo Montero.mp3",
-    cover: "images/Cover of El Señor es mi pastor by Danilo Montero.jpg",
-    hex: "#E96A92",
-    barColor: "#e398b0",
-  }, 
-  {
-    title: "Fuerzas Pa'",
+  },
+    {
+    title: "No Hay Lugar Mas Alto (feat. Christine D Clario)", //160
+    artist: "Miel San Marcos, Christine D'Clario",
+    src: "songs/SpotiDownloader.com - No Hay Lugar Mas Alto (feat. Christine D Clario) - Miel San Marcos.mp3",
+    cover: "images/Cover of No Hay Lugar Mas Alto (feat. Christine D Clario) by Miel San Marcos, Christine D'Clario.jpg",
+  },
+    {
+    title: "Fuerzas Pa'", //161
     artist: "Vaes",
     src: "songs/SpotiDownloader.com - Fuerzas Pa' - Vaes.mp3",
     cover: "images/Cover of Fuerzas Pa' by Vaes.jpg",
     hex: "#EE5757",
     barColor: "#e68585",
     video: "videos/Vaes3.mp4",
-  }, 
-  {
-    title: "Asi Es Tu Amor",
-    artist: "Vaes",
-    src: "songs/SpotiDownloader.com - Asi Es Tu Amor - Vaes.mp3",
-    cover: "images/Cover of Asi Es Tu Amor by Vaes.jpg",
-    hex: "#B05010",
-    barColor: "#d18552",
-    video: "videos/Vaes4.mp4",
-  }, 
-  {
-    title: "Solo a Dios",
-    artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Solo a Dios - Agustin Amador.mp3",
-    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
-    hex: "#456426",
-    barColor: "#a6dc71",
-  }, 
-  {
-    title: "Virtuosa",
-    artist: "Samuel Adrián",
-    src: "songs/SpotiDownloader.com - Virtuosa - Samuel Adrián.mp3",
-    cover: "images/Cover of Virtuosa by Samuel Adrián.jpg",
   },
-  {
-    title: "Otra Vez", 
+    {
+    title: "Yo Te Esperare", //162
+    artist: "Los Hermanos Reyes",
+    src: "songs/Reyes.mp3",
+    cover: "images/Hay una ciudad.png",
+    hex: "#b09539ff",
+    barColor: "#e4b20dff"
+  },
+    {
+    title: "Otra Vez", //163
     artist: "Madiel Lara",
     src: "songs/SpotiDownloader.com - Otra Vez - Madiel Lara.mp3",
     cover: "images/Cover of Otra Vez by Madiel Lara.jpg",
     video: "videos/MadielLara5.mp4"
-  },    
-  {
-    title: "Precioso Regalo",//266
-    artist: "Zulmy Mejia",
-    src: "songs/SpotiDownloader.com - Precioso Regalo - Zulmy Mejia.mp3",
-    cover: "images/zulmy.jpg",
-  }, 
-  {
-    title: "Madre Solo Una",//267
+  },
+    {
+    title: "Eres Libre", //164
+    artist: "Anita Morán",
+    src: "songs/Eres Libre.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "Vencedor", //165
+    artist: "Anita Morán",
+    src: "songs/Vencedor - Anita Moran.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "Primero Dios, Vol. 5", //166
     artist: "Agustin Amador",
-    src: "songs/SpotiDownloader.com - Madre Solo Una - Agustin Amador.mp3",
-    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
-  }, 
-  {
-    title: "Precioso Regalo ft Voceros",//268
-    artist: "Zulmy Mejia, Los Voceros de Cristo",
-    src: "songs/Precioso Regalo_spotdown.org.mp3",
-    cover: "images/Cover of Precioso Regalo by Zulmy Mejia, Los Voceros de Cristo.jpg",
-  }, 
-  {
-    title: "Encontrarte",//272
-    artist: "Majo y Dan, Madiel Lara",
-    src: "songs/SpotiDownloader.com - Encontrarte - Majo y Dan.mp3",
-    cover: "images/Cover of Encontrarte by Majo y Dan, Madiel Lara.jpg",
-    video: "videos/majoYDan3.mp4",
-    lrc: "LRC files/Encontrarte - Majo y Dan, Madiel Lara.lrc",
-  }, 
-  {
-    title: "Sol en día nublado",//281
-    artist: "Majo y Dan, Vaes",
-    src: "songs/SpotiDownloader.com - Sol en día nublado - Majo y Dan.mp3",
-    cover: "images/Cover of Sol en día nublado by Majo y Dan, Vaes.jpg",
-    video: "videos/majoYDan4.mp4",
-    lrc: "LRC files/Sol en día nublado - Majo y Dan, Vaes.lrc",
-  }, 
-  {
-    title: "La Cumbia del Perdón",//282
-    artist: "Vaes, Musiko",
-    src: "songs/SpotiDownloader.com - La Cumbia del Perdón - Vaes.mp3",
-    cover: "images/Cover of La Cumbia del Perdón by Vaes, Musiko.jpg",
-    video: "videos/Vaes6.mp4"
-  }, 
-  {
-    title: "Ese Hombre - Si Tienes un Amor - Si el Mundo en Vez de Rosas - En Vivo", //285
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Ese Hombre - Si Tienes un Amor - Si el Mundo en Vez de Rosas - En Vivo - Los Voceros de Cristo.mp3",
-    cover: "images/su amor.jpg",
+    src: "songs/SpotiDownloader.com - Primero Dios, Vol. 5 - Agustin Amador.mp3",
+    cover: "images/Cover of Primero Dios, Vol. 5 by Agustin Amador.jpg",
+    hex: "#B99241",
+    barColor: "#e2bd71",
   },
-  {
-    title: "Si el Mundo en Vez de Rosas", //286
-    artist: "Los Voceros de Cristo",
-    src: "songs/Si el Mundo en Vez de Rosas_spotdown.org.mp3",
-    cover: "images/Cover of Si el Mundo en Vez de Rosas by Los Voceros de Cristo.jpg",
+    {
+    title: "Te Doy Gracias", //167
+    artist: "Los Hermanos Reyes/Leonel Tuchez",
+    src: "songs/song27.mp3",
+    cover: "images/song27.png",
+    hex: "#383838",
+    barColor: "#6b5a3bff"
   },
-  {
-    title: "Dios De Imposibles", 
-    artist: "Un Corazón, Louie Abrego, Kim Richards",
-    src: "songs/SpotiDownloader.com - Dios De Imposibles - Un Corazón.mp3",
+    {
+    title: "Pródigo", //168
+    artist: "Un Corazón, Louie Abrego",
+    src: "songs/Pródigo.mp3",
     cover: "images/Cover of Pródigo by Un Corazón, Louie Abrego.jpg",
+    hex: "#62A2AB",
+    barColor: "#9ec3c8",
+    video: "videos/UnCorazon2.mp4",
   },
-  {
-    title: "Esa Oveja Era Yo", 
-    artist: "Leonel Tuchez",
-    src: "songs/SpotiDownloader.com - Esa Oveja Era Yo - Leonel Tuchez.mp3",
-    cover: "images/Esperando.jpg",
+    {
+    title: "Mi Piloto", //169
+    artist: "Anita Morán",
+    src: "songs/Mi Piloto - Anita Morán (Video Letra Oficial) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
   },
-  {
-    title: "Enciende Una Luz", //290
-    artist: "Marcos Witt, Un Corazón, Sarai Rivera, Elena Witt-Guerra, Krystal Guerra Witt, TAYA, Montesanto, Miel San Marcos, Waleska Morales, ECCOS, Indiomar",
-    src: "songs/SpotiDownloader.com - Enciende Una Luz - Marcos Witt.mp3",
-    cover: "images/Cover of Enciende Una Luz by Marcos Witt, Un Corazón, Sarai Rivera, Elena Witt-Guerra, Krystal Guerra Witt, TAYA, Montesanto, Miel San Marcos, Waleska Morales, ECCOS, Indiomar.jpg",
-    video: "videos/MarcosWitt2.mp4"
+    {
+    title: "Tengo un Dios", //170
+    artist: "Los Hermanos Reyes",
+    src: "songs/Tengo un Dios.mp3",
+    cover: "images/Tengo un Dios.png",
+    hex: "#787053ff",
+    barColor: "#907926ff"
   },
-  {
-    title: "Gracias", 
-    artist: "Marcos Witt",
-    src: "songs/Gracias.mp3",
-    cover: "images/a6.png",
+    {
+    title: "Mi Pensamiento", //171
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Mi Pensamiento - Agustin Amador.mp3",
+    cover: "images/Cover of Mi Pensamiento by Agustin Amador.jpg",
+    hex: "#7F000F",
+    barColor: "#af1a2b",
   },
-  {
-    title: "Gracias/Tu Fidelidad", 
-    artist: "Marcos Witt, Un Corazón",
-    src: "songs/SpotiDownloader.com - Gracias - Marcos Witt, Un Corazon.mp3",
-    cover: "images/Cover of Gracias _ Tu Fidelidad by Marcos Witt, Un Corazón.jpg",
-    video: "videos/MarcosWitt1.mp4",
+    {
+    title: "Amartesolo a ti Señor", //172
+    artist: "Los Hermanos Reyes",
+    src: "songs/Amarte.mp3",
+    cover: "images/Hay un Dios.png",
+    hex: "#0b2f43ff",
+    barColor: "#025988ff"
   },
-  {
-    title: "Jesús Sé Mi Guía", 
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Jesús Sé Mi Guía - Los Voceros de Cristo.mp3",
-    cover: "images/Cover of La Biblia dice que el hombre by Los Voceros de Cristo.jpg",
+    {
+    title: "HAY UN DIOS - REMIX", //173
+    artist: "Seeiji, Vaes",
+    src: "songs/SpotiDownloader.com - HAY UN DIOS - REMIX - Seeiji.mp3",
+    cover: "images/Cover of HAY UN DIOS - REMIX by Seeiji, Vaes.jpg",
+    hex: "#F76800",
+    barColor: "#ffaa6d",
+    video: "videos/Seeji1.mp4",
   },
-  {
-    title: "Los Trigales", 
-    artist: "Los Voceros de Cristo",
-    src: "songs/SpotiDownloader.com - Los Trigales - Los Voceros de Cristo.mp3",
-    cover: "images/song11.png",
+    {
+    title: "Alla en los Olivos", //174
+    artist: "Los Hermanos Reyes",
+    src: "songs/Alla en los olivos.mp3",
+    cover: "images/Hay una ciudad.png",
+    hex: "#b19433ff",
+    barColor: "#e5b003ff"
   },
-  {
-    title: "Yo Tengo Fe", //295
-    artist: "Zulmy Mejia",
-    src: "songs/SpotiDownloader.com - Yo Tengo Fe - Zulmy Mejia.mp3",
-    cover: "images/Cover of Yo Tengo Fe by Zulmy Mejia.jpg",
+    {
+    title: "Todo Pasa", //175
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Toda Pasa - Agustin Amador.mp3",
+    cover: "images/Cover of Incontable Maravilla by Agustin Amador.jpg",
   },
-  {
-    title: "Edifiquemos", 
-    artist: "Zulmy Mejia",
-    src: "songs/SpotiDownloader.com - Edifiquemos - Zulmy Mejia.mp3",
-    cover: "images/zulmy.jpg",
-  },
-  {
-    title: "Debo Correr", 
-    artist: "Óscar Medina",
-    src: "songs/Debo Correr.mp3",
-    cover: "images/Cover of Debo Correr by Óscar Medina.jpg",
-  },
-  {
-    title: "Dulce Hogar", 
-    artist: "Katty Mazariegos",
-    src: "songs/SpotiDownloader.com - Dulce Hogar - Katty Mazariegos.mp3",
-    cover: "images/Cover of Tren de la Vida by Katty Mazariegos.jpg",
-  },
-  {
-    title: "Deuda", 
-    artist: "Katty Mazariegos",
-    src: "songs/SpotiDownloader.com - Deuda - Katty Mazariegos.mp3",
-    cover: "images/Cover of Deuda by Katty Mazariegos.jpg",
-  },
-  {
-    title: "Tren de la Vida", //300
-    artist: "Katty Mazariegos",
-    src: "songs/SpotiDownloader.com - Tren de la Vida - Katty Mazariegos.mp3",
-    cover: "images/Cover of Tren de la Vida by Katty Mazariegos.jpg",
-  },
-  {
-    title: "Jesús Es Mi Rey Soberano", 
-    artist: "Leonel Tuchez",
-    src: "songs/Jesús Es Mi Rey Soberano.mp3",
-    cover: "images/Esperando.jpg",
-  },
-  {
-    title: "Pensaba En Ti", 
-    artist: "Leonel Tuchez",
-    src: "songs/SpotiDownloader.com - Pensaba En Ti - Leonel Tuchez.mp3",
-    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
-  },
-  {
-    title: "Tu el Alfarero", 
-    artist: "Ezequiel Williams",
-    src: "songs/SpotiDownloader.com - Tu el Alfarero - Ezequiel Williams.mp3",
-    cover: "images/Cover of Tu el Alfarero by Ezequiel Williams.jpg",
-  },
-  {
-    title: "Ahora Cristiano Soy", //305
-    artist: "Ezequiel Williams",
-    src: "songs/SpotiDownloader.com - Ahora Cristiano Soy - Ezequiel Williams.mp3",
-    cover: "images/Cover of Hoy Te Pido Señor by Ezequiel Williams.jpg",
-  },
-  {
-    title: "Hoy Te Pido Señor", 
-    artist: "Ezequiel Williams",
-    src: "songs/SpotiDownloader.com - Hoy Te Pido Señor - Ezequiel Williams.mp3",
-    cover: "images/Cover of Hoy Te Pido Señor by Ezequiel Williams.jpg",
-  },
-  {
-    title: "Increíble", 
-    artist: "Miel San Marcos, Evan Craft",
-    src: "songs/SpotiDownloader.com - Increíble (feat. Evan Craft) - Miel San Marcos.mp3",
-    cover: "images/Cover of No Hay Lugar Mas Alto (feat. Christine D Clario) by Miel San Marcos, Christine D'Clario.jpg",
-  },
-  {
-    title: "No Hay Lugar Mas Alto (feat. Christine D Clario)", //308
-    artist: "Miel San Marcos, Christine D'Clario",
-    src: "songs/SpotiDownloader.com - No Hay Lugar Mas Alto (feat. Christine D Clario) - Miel San Marcos.mp3",
-    cover: "images/Cover of No Hay Lugar Mas Alto (feat. Christine D Clario) by Miel San Marcos, Christine D'Clario.jpg",
-  },
-  {
-    title: "Dame Tus Ojos", //
+    {
+    title: "Dame Tus Ojos", //176
     artist: "Marcela Gandera, Jesús Adrián Romero",
     src: "songs/Dame Tus Ojos_spotdown.org.mp3",
     cover: "images/song7.png",
   },
-  {
-    title: "Ven, Te Necesito", //
-    artist: "Lilly Goodman, Jesús Adrián Romero",
-    src: "songs/Ven, Te Necesito_spotdown.org.mp3",
-    cover: "images/Screenshot 2026-07-18 2.32.22 PM.png",
-    video: "videos/Romero1.mp4"
-  },
-  {
-    title: "Tú Estás Aquí (Live)", //
-    artist: "Marcela Gandara, Jesús Adrián Romero",
-    src: "songs/Tú Estás Aquí (Live)_spotdown.org.mp3",
-    cover: "images/Screenshot 2026-07-18 3.08.29 PM.png",
-  },
-  {
-    title: "El Señor Es Mi Rey (feat. Tony Perez)", //
-    artist: "Miel San Marcos, Tony Pérez",
-    src: "songs/El Señor Es Mi Rey (feat. Tony Perez)_spotdown.org.mp3",
-    cover: "images/Cover of El Señor Es Mi Rey (feat. Tony Perez) by Miel San Marcos, Tony Pérez.jpg",
-  },
-  {
-    title: "Que Sería De Mi", //315
-    artist: "Jesús Adrián Romero",
-    src: "songs/Que Sería De Mi_spotdown.org.mp3",
-    cover: "images/Screenshot 2026-07-18 3.03.36 PM.png",
-    video: "videos/Romero2.mp4",
-  },
-  {
-    title: "Jesús Mi Fiel Amigo - Sesión Orgánica", //
-    artist: "Abel Zavala",
-    src: "songs/Jesús Mi Fiel Amigo - Sesión Orgánica_spotdown.org.mp3",
-    cover: "images/Cover of Jesús Mi Fiel Amigo - Sesión Orgánica by Abel Zavala.jpg",
-  },
-  {
-    title: "Jesús Mi Fiel Amigo (En Vivo)", //
-    artist: "Abel Zavala",
-    src: "songs/SpotiDownloader.com - Jesús Mi Fiel Amigo (En Vivo) - Abel Zavala.mp3",
-    cover: "images/Cover of Jesús Mi Fiel Amigo (En Vivo) by Abel Zavala.jpg",
-  },
-  {
-    title: "Con Mis Manos Levantadas", //318
-    artist: "Danilo Montero",
-    src: "songs/SpotiDownloader.com - Con Mis Manos Levantadas - Danilo Montero.mp3",
-    cover: "images/Cover of Con Mis Manos Levantadas by Danilo Montero.jpg",
-  },
-  {
-    title: "Reborn", //
-    artist: "Evan Craft, Redimi2",
-    src: "songs/SpotiDownloader.com - Reborn - Evan Craft.mp3",
-    cover: "images/evan.png",
-    lrc: "LRC files/Reborn - Evan Craft, Redimi2.lrc",
-  },
-  {
-    title: "Estoy TRANQUILO", //
-    artist: "Madiel Lara",
-    src: "songs/SpotiDownloader.com - Estoy TRANQUILO - Madiel Lara.mp3",
-    cover: "images/Cover of Otra Vez by Madiel Lara.jpg",
-    video: "videos/MadielLara8.mp4"
-  },
-  {
-    title: "La Bondad De Dios", //324
-    artist: "Evan Craft, Elena Witt-Guerra",
-    src: "songs/SpotiDownloader.com - La Bondad De Dios - Evan Craft.mp3",
-    cover: "images/Cover of La Bondad De Dios by Evan Craft, Elena Witt-Guerra.jpg",
-  },
-  {
-    title: "Que Mi Fe No Falle", //325
-    artist: "Evan Craft",
-    src: "songs/SpotiDownloader.com - Que Mi Fe No Falle - Evan Craft.mp3",
-    cover: "images/Más_Rico_Del_Mundo.png",
-    video: "videos/EvanCraft2.mp4",
-  },
-  {
-    title: "Lámpara Es, La Biblia", //330
-    artist: "Manuel Bonilla",
-    src: "songs/Manuel Bonilla - Lámpara Es, La Biblia (Álbum Un Cántico Nuevo).mp3",
-    cover: "images/Cover of Lámpara Es _ La Biblia by Manuel Bonilla.jpg",
-  },
-  {
-    title: "La Biblia", //331
-    artist: "Agustin Amador",
-    src: "songs/La Biblia.mp3",
-    cover: "images/Cover of Incontable Maravilla by Agustin Amador.jpg",
-  },
-  {
-    title: "De Tal Manera", //332
-    artist: "Jesús Adrián Romero",
-    src: "songs/SpotiDownloader.com - De Tal Manera - Jesús Adrián Romero.mp3",
-    cover: "images/Cover of De Tal Manera by Jesús Adrián Romero, Abel Zavala.jpg",
-  },
-  {
-    title: "Clamaré", //337
-    artist: "Francisco Orantes, Veronica Leal",
-    src: "songs/SpotiDownloader.com - Clamaré - Francisco Orantes.mp3",
-    cover: "images/Cover of Clamaré by Francisco Orantes, Veronica Leal.jpg",
-  },
-  {
-    title: "Hoy Soy Feliz", //338
-    artist: "Francisco Orantes, Veronica Leal",
-    src: "songs/Hoy Soy Feliz  Francisco Orantes.mp3",
-    cover: "images/Screenshot 2026-08-28 11.39.46 PM.png",
-  },
-  {
-    title: "Eran 100 Ovejas (Visión Pastoral)", //339
-    artist: "Francisco Orantes, Paulino Bernal",
-    src: "songs/Eran 100 Ovejas (Visión Pastoral) Francisco Orantes ft Paulino Bernal.mp3",
-    cover: "images/Screenshot 2026-08-28 11.39.46 PM.png",
-  },
-  {
-    title: "Alaba", //340
-    artist: "Evan Craft, Intimidad Worship",
-    src: "songs/Alaba_spotdown.mp3",
-    cover: "images/Cover of La Bondad De Dios by Evan Craft, Elena Witt-Guerra.jpg",
-  },
-  {
-    title: "The Devil Is A Liar", //341
-    artist: "Evan Craft",
-    src: "songs/SpotiDownloader.com - The Devil Is A Liar - Evan Craft.mp3",
-    cover: "images/evan.png",
-    lrc: "LRC files/The Devil Is A Liar - Evan Craft.lrc"
-  },
-  {
-    title: "Siempre Me Encuentras (You Find Me)", //342
-    artist: "Evan Craft",
-    src: "songs/SpotiDownloader.com - Siempre Me Encuentras (You Find Me) - Evan Craft.mp3",
-    cover: "images/evan.png",
-    lrc: "LRC files/Siempre Me Encuentras (You Find Me) - Evan Craft.lrc"
-  }, 
-  {
-    title: "Agradecido", //363
+    {
+    title: "Agradecido", //177
     artist: "Oasis Ministry, Madiel Lara",
     src: "songs/SpotiDownloader.com - Agradecido - Oasis Ministry.mp3",
     cover: "images/Cover of Agradecido by Oasis Ministry, Madiel Lara.jpg",
     video: "videos/Oasis1.mp4",
     lrc: "LRC files/Agradecido - Oasis Ministry, Madiel Lara.lrc",
   },
-  {
-    title: "mi DIOS", //3##
-    artist: "Madiel Lara",
-    src: "songs/SpotiDownloader.com - mi DIOS - Madiel Lara.mp3",
-    cover: "images/Cover of mi DIOS by Madiel Lara.jpg",
-    lrc: "LRC files/mi DIOS - Madiel Lara.lrc",
+    {
+    title: "El volverá", //178
+    artist: "Los Voceros de Cristo/Aníbal Marroquín",
+    src: "songs/volverá.mp3",
+    cover: "images/new4.png",
+    hex: "#313831",
+    barColor: "#527052ff"
   },
-  {
-    title: "Espíritu De Dios",
+    {
+    title: "Creo En Ti", //179
+    artist: "Julio Melgar",
+    src: "songs/SpotiDownloader.com - Creo En Ti - Julio Melgar.mp3",
+    cover: "images/Cover of Creo En Ti by Julio Melgar.jpg",
+  },
+    {
+    title: "Tanto Amor", //180
+    artist: "Anita Morán",
+    src: "songs/Tanto amor.mp3",
+    cover: "images/Tanto Amor Album.jpg",
+  },
+    {
+    title: "No Tardes", //181
+    artist: "Anita Morán",
+    src: "songs/No Tardes - Anita Moran.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "Cantos de Júbilo", //182
+    artist: "Anita Morán",
+    src: "songs/Cantos de Jubilo.mp3",
+    cover: "images/Eres Libre Album.jpg",
+  },
+    {
+    title: "De Tal Manera", //183
+    artist: "Jesús Adrián Romero",
+    src: "songs/SpotiDownloader.com - De Tal Manera - Jesús Adrián Romero.mp3",
+    cover: "images/Cover of De Tal Manera by Jesús Adrián Romero, Abel Zavala.jpg",
+  },
+    {
+    title: "Aunque No Lo Crean", //184
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Aunque No Lo Crean - Agustín Amador.mp3",
+    cover: "images/Cover of Aunque No Lo Crean by Agustín Amador.jpg",
+    hex: "#5857A7",
+    barColor: "#aba9f7",
+  },
+    {
+    title: "Un Grano de Arena", //185
+    artist: "Manuel Bonilla",
+    src: "songs/Un Grano De Arena.mp3",
+    cover: "images/Un Grano De Arena.png",
+  },
+    {
+    title: "Esa Oveja Era Yo", //186
     artist: "Leonel Tuchez",
-    src: "songs/SpotiDownloader.com - Espíritu De Dios - Leonel Tuchez.mp3",
-    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg"
+    src: "songs/SpotiDownloader.com - Esa Oveja Era Yo - Leonel Tuchez.mp3",
+    cover: "images/Esperando.jpg",
   },
-  {
-    title: "La Historia Del Violín", 
-    artist: "Leonel Tuchez",
-    src: "songs/Leonel Tuchez - La Historia Del Violín (SPOTISAVER).mp3",
-    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg"
+    {
+    title: "Con Cristo Me Basta", //187
+    artist: "Agustin Amador",
+    src: "songs/SpotiDownloader.com - Con Cristo Me Basta - Agustin Amador.mp3",
+    cover: "images/Cover of Con Cristo Me Basta by Agustin Amador.jpg",
+    hex: "#456426",
+    barColor: "#a6dc71",
   },
-  {
-    title: "Casa Nueva", 
-    artist: "Leonel Tuchez",
-    src: "songs/Leonel Tuchez - Casa Nueva (SPOTISAVER).mp3",
-    cover: "images/Cover of Salmo 23 by Leonel Tuchez.jpg",
+    {
+    title: "Los Trigales", //188
+    artist: "Los Voceros de Cristo",
+    src: "songs/SpotiDownloader.com - Los Trigales - Los Voceros de Cristo.mp3",
+    cover: "images/song11.png",
   },
-  {
-    title: "Más Que Vencedor",
+    {
+    title: "El Señor es mi pastor", //189
     artist: "Danilo Montero",
-    src: "songs/SpotiDownloader.com - Más Que Vencedor - Danilo Montero.mp3",
-    cover: "images/Cambiado.jpg",
+    src: "songs/SpotiDownloader.com - El Señor es mi pastor - Danilo Montero.mp3",
+    cover: "images/Cover of El Señor es mi pastor by Danilo Montero.jpg",
+    hex: "#E96A92",
+    barColor: "#e398b0",
   },
-  {
-    title: "Feliz Cumpleaños",
-    artist: "Biper Y Sus Amigos",
-    src: "songs/SpotiDownloader.com - Feliz Cumple - Biper Y Sus Amigos.mp3",
-    cover: "images/Cover of Feliz Cumple by Biper Y Sus Amigos.jpg",
+    {
+    title: "Cristo Es Necesario", //190
+    artist: "Danny Gokey/Christine D'Clario",
+    src: "songs/SpotiDownloader.com - Cristo Es Necesario - Danny Gokey.mp3",
+    cover: "images/Cover of Cristo Es Necesario by Danny Gokey, Christine D'Clario.jpg",
+    hex: "#864776",
+    barColor: "#747374",
   },
-  /* 
+    {
+    title: "Solamente En Jesús", //191
+    artist: "Anita Morán",
+    src: "songs/Solamente En Jesús - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+    {
+    title: "El Espíritu de Dios", //192
+    artist: "Anita Morán",
+    src: "songs/Anita Morán - El Espíritu de Dios (Video Letra) - Anita Morán.mp3",
+    cover: "images/Cover of Soy Peregrino by Anita Morán.jpg",
+  },
+    {
+    title: "No Deves Llorar", //193
+    artist: "Anita Morán",
+    src: "songs/07 Track 7.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "No Hay Nadie Como Cristo", //194
+    artist: "Marilú Orantes",
+    src: "songs/SpotiDownloader.com - No Hay Nadie Como Cristo - Marilú Orantes.mp3",
+    cover: "images/Cover of No Hay Nadie Como Cristo by Marilú Orantes.jpg",
+    hex: "#CA3DE9",
+    barColor: "#ff2121",
+  },
+    {
+    title: "Tú Estás Aquí (Live)", //195
+    artist: "Marcela Gandara, Jesús Adrián Romero",
+    src: "songs/Tú Estás Aquí (Live)_spotdown.org.mp3",
+    cover: "images/Screenshot 2026-07-18 3.08.29 PM.png",
+  },
+    {
+    title: "Exitos de Recuerdos Ft. Los Hermanos Reyes", //196
+    artist: "Los Milagros de Cristo/Los Hermanos Reyes",
+    src: "songs/Exitos.mp3",
+    cover: "images/Cover of Exitos.jpg",
+  },
+    {
+    title: "Cordero", //197
+    artist: "Manuel Bonilla",
+    src: "songs/Cordero.mp3",
+    cover: "images/song5.jpg",
+  },
+    {
+    title: "Que Sería De Mi", //198
+    artist: "Jesús Adrián Romero",
+    src: "songs/Que Sería De Mi_spotdown.org.mp3",
+    cover: "images/Screenshot 2026-07-18 3.03.36 PM.png",
+    video: "videos/Romero2.mp4",
+  },
+    {
+    title: "Virtuosa", //199
+    artist: "Samuel Adrián",
+    src: "songs/SpotiDownloader.com - Virtuosa - Samuel Adrián.mp3",
+    cover: "images/Cover of Virtuosa by Samuel Adrián.jpg",
+  },
+    {
+    title: "The Devil Is A Liar", //200
+    artist: "Evan Craft",
+    src: "songs/SpotiDownloader.com - The Devil Is A Liar - Evan Craft.mp3",
+    cover: "images/evan.png",
+    lrc: "LRC files/The Devil Is A Liar - Evan Craft.lrc"
+  },
+    {
+    title: "Tus Obras", //201
+    artist: "Anita Morán",
+    src: "songs/08 Track 8.mp3",
+    cover: "images/Screenshot 2026-10-24 232609.png",
+  },
+    {
+    title: "Clamaré", //202
+    artist: "Francisco Orantes, Veronica Leal",
+    src: "songs/SpotiDownloader.com - Clamaré - Francisco Orantes.mp3",
+    cover: "images/Cover of Clamaré by Francisco Orantes, Veronica Leal.jpg",
+  },
+    {
+    title: "Que Feliz Estoy", //203
+    artist: "Francisco Orantes",
+    src: "songs/SpotiDownloader.com - Que Feliz Estoy - Francisco Orantes.mp3",
+    cover: "images/song10.png",
+    hex: "#A16962",
+    barColor: "#b84e40ff"
+  },
+/* 
   {
     title: "", //3##
     artist: "",
@@ -1902,11 +1406,11 @@ const playlist = [
 ];
 
 const playlistOrder = {
-  NoTemeréVol10: [10, 12, 16, 17, 18, 19, 20, 21, 22],
-  VencedorVol4: [13, 15, 23, 14, 24, 25, 26, 27, 28, 29],
-  NecesitoTuPresenciaVol7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-  EresLibreVol9: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39],
-  TantoAmorVol9: [40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+  NoTemeréVol10: [31, 74, 44, 67, 116, 58, 158, 20, 104],
+  VencedorVol4: [165, 181, 148, 3, 101, 39, 193, 201, 126, 128],
+  NecesitoTuPresenciaVol7: [38, 76, 59, 5, 6, 191, 192, 64, 169, 70],
+  EresLibreVol9: [164, 77, 137, 149, 55, 182, 142, 118, 4, 127],
+  TantoAmorVol9: [180, 15, 84, 125, 36, 53, 145, 8, 51, 144],
   //make a playlist for the mothers day songs
 };
 
