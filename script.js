@@ -1394,6 +1394,12 @@ const playlist = [
     hex: "#A16962",
     barColor: "#b84e40ff"
   },
+    {
+    title: "Adora Y Ora", //204
+    artist: "Pedro Pablo Quintero",
+    src: "songs/SpotiDownloader.com - Adora Y Ora - Pedro Pablo Quintero.mp3",
+    cover: "images/Cover of Adora Y Ora by Pedro Pablo Quintero.jpg",
+  },
 /* 
   {
     title: "", //3##
