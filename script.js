@@ -33,6 +33,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Te quiero Papa.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Te quiero papa.lrc",
   },
     {
     title: "DICHOSO EL HOMBRE QUE CONFÍA EN JEHOVÁ", //5
@@ -375,6 +376,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Venciendo con Jesus.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Venciendo con Jesus.lrc",
   },
     {
     title: "Loor A Ti Mi Dios (2024)", //56
@@ -526,6 +528,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Dulce Historia.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Dulce historia.lrc",
   },
     {
     title: "Espíritu De Dios", //78
@@ -809,6 +812,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Cuando Te Conoci.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Cuande te conoci.lrc",
   },
     {
     title: "Me Dicen Que Me Aman", //119
@@ -867,6 +871,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/La puerta es Cristo.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/La puerta es cristo.lrc",
   },
     {
     title: "A donde Iré", //128
@@ -933,6 +938,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Roca Eterna.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Roca Eterna.lrc",
   },
     {
     title: "Ese Hombre - Si Tienes un Amor - Si el Mundo en Vez de Rosas - En Vivo", //138
@@ -967,6 +973,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Para Ti Mama.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Para ti mama.lrc",
   },
     {
     title: "Como una Flor", //143
@@ -1012,6 +1019,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Herido Fue.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Herido fue.lrc",
   },
     {
     title: "Vivir Cantado", //150
@@ -1123,6 +1131,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Eres Libre.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Eres libre.lrc",
   },
     {
     title: "Vencedor", //165
@@ -1253,6 +1262,7 @@ const playlist = [
     artist: "Anita Morán",
     src: "songs/Cantos de Jubilo.mp3",
     cover: "images/Eres Libre Album.jpg",
+    lrc: "LRC files/Cantos de jubilo.lrc",
   },
     {
     title: "De Tal Manera", //183
